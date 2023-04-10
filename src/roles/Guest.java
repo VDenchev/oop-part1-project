@@ -4,7 +4,7 @@ import contracts.User;
 import enums.PermissionLevel;
 
 public class Guest implements User {
-    PermissionLevel permissionLevel;
+    private PermissionLevel permissionLevel;
 
     public Guest() {
         permissionLevel = PermissionLevel.GUEST;

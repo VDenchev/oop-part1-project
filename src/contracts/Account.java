@@ -2,6 +2,8 @@ package contracts;
 
 import enums.PermissionLevel;
 
+import java.util.Objects;
+
 public abstract class Account implements User{
     private String username;
     private String password;
@@ -29,4 +31,14 @@ public abstract class Account implements User{
     public String toString() {
         return username + ":" + password + ":" + permissionLevel;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Account account)) return false;
+
+        if (!Objects.equals(username, account.username)) return false;
+        return Objects.equals(password, account.password);
+    }
+
 }

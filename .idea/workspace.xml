@@ -4,30 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd6be47a-342f-4cde-8c77-7b415d825824" name="Changes" comment="Update gitignore">
-      <change afterPath="$PROJECT_DIR$/src/commands/ConsoleReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commands/ConsoleWriter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commands/HelpCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commands/guest/Login.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commands/level/AdminCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commands/level/GuestCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commands/level/UserCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commands/login/AccountRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commands/login/LoginVerifier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/contracts/Account.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/contracts/Command.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/contracts/Reader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/contracts/Repository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/contracts/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/contracts/Writer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/enums/PermissionLevel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/files/accounts.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/roles/Admin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/roles/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/roles/Guest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/singleton/LoggedInUser.java" afterDir="false" />
+    <list default="true" id="bd6be47a-342f-4cde-8c77-7b415d825824" name="Changes" comment="Add log in functionality, accounts and skeleton for adding more commands">
+      <change afterPath="$PROJECT_DIR$/src/commands/CommandAuthorizer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/commands/admin/Users.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/commands/admin/UsersAdd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/commands/admin/UsersRemove.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/commands/login/AccountDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/commands/login/AccountService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/commands/user/Logout.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/contracts/AccountDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/factories/CommandFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/guest/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/guest/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/level/AdminCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/level/AdminCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/level/GuestCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/level/GuestCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/level/UserCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/level/UserCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/login/AccountRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/login/LoginVerifier.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contracts/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/contracts/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contracts/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/contracts/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contracts/Repository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/files/accounts.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/files/accounts.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/roles/Guest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/roles/Guest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,8 +36,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -49,7 +48,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2NNq84uabowZXcLppHsVBbSOXjj" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -61,7 +62,7 @@
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/Users/coolb/IdeaProjects/OOP part 1 project/src",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "advanced.settings"
+    "settings.editor.selected.configurable": "inlay.hints"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -105,7 +106,15 @@
       <workItem from="1679514750243" duration="792000" />
       <workItem from="1679570854779" duration="3966000" />
       <workItem from="1679664428658" duration="13479000" />
-      <workItem from="1679738382443" duration="15382000" />
+      <workItem from="1679738382443" duration="16122000" />
+      <workItem from="1680266920094" duration="10065000" />
+      <workItem from="1680354163054" duration="13138000" />
+      <workItem from="1680715534221" duration="6922000" />
+      <workItem from="1680781649127" duration="13626000" />
+      <workItem from="1680948563776" duration="511000" />
+      <workItem from="1681407588013" duration="4485000" />
+      <workItem from="1681466421997" duration="421000" />
+      <workItem from="1681912883150" duration="7291000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1679514872614</created>
@@ -121,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679515124626</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add log in functionality, accounts and skeleton for adding more commands">
+      <created>1679756467853</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1679756467853</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,6 +157,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Update gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update gitignore" />
+    <MESSAGE value="Add log in functionality, accounts and skeleton for adding more commands" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add log in functionality, accounts and skeleton for adding more commands" />
   </component>
 </project>

@@ -1,6 +1,6 @@
 package commands.guest;
 
-import commands.login.LoginVerifier;
+import commands.login.AccountService;
 import contracts.Account;
 import contracts.Reader;
 import contracts.Writer;
@@ -10,15 +10,22 @@ import commands.level.GuestCommand;
 
 
 public class Login extends GuestCommand {
-    public Login(LoggedInUser loggedInUser) {
-        super(loggedInUser);
+    private Reader reader;
+    private Writer writer;
+    private LoggedInUser loggedInUser;
+    private AccountService accountService;
+
+    public Login(Reader reader, Writer writer, LoggedInUser loggedInUser, AccountService accountService) {
+        this.reader = reader;
+        this.writer = writer;
+        this.loggedInUser = loggedInUser;
+        this.accountService = accountService;
     }
 
     @Override
-    public void execute(String[] args, Reader reader, Writer writer) {
-        if (getLoggedInUser().getPermissionLevel() == PermissionLevel.ADMIN || getLoggedInUser().getPermissionLevel() == PermissionLevel.CLIENT) {
-            writer.writeLine("You are already logged in!");
-            return;
+    public String execute(String[] args) {
+        if (loggedInUser.getPermissionLevel() == PermissionLevel.ADMIN || loggedInUser.getPermissionLevel() == PermissionLevel.CLIENT) {
+            return "You are already logged in!";
         }
 
         writer.writeLine("Enter username:");
@@ -26,12 +33,13 @@ public class Login extends GuestCommand {
         writer.writeLine("Enter password:");
         String password = reader.readLine();
 
-        LoginVerifier loginVerifier = new LoginVerifier();
-        if (loginVerifier.doesAccountExist(username, password)){
-            Account account = loginVerifier.getMatchingAccount(username, password);
-            getLoggedInUser().setUser(account);
-        } else {
-            writer.writeLine("Invalid credentials!");
+        try{
+            Account account = accountService.getAccountFromFile(username, password);
+            loggedInUser.setUser(account);
+
+            return "Successfully logged in as " + username + "!";
+        } catch (Exception e) {
+            return e.getMessage();
         }
     }
 }
