@@ -1,23 +1,27 @@
 import commands.CommandAuthorizer;
 import commands.ConsoleReader;
 import commands.ConsoleWriter;
-import commands.admin.Users;
-import commands.guest.Login;
 import commands.login.AccountDAOImpl;
 import commands.login.AccountService;
 import contracts.Command;
 import contracts.Reader;
 import contracts.Writer;
 import factories.CommandFactory;
-import roles.Guest;
-import singleton.LoggedInUser;
+import models.book.Library;
+import models.roles.Guest;
+import models.singleton.LibraryFile;
+import models.singleton.LoggedInUser;
+
 
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
+        Library library = new Library();
+
         LoggedInUser user = LoggedInUser.getInstance();
         user.setUser(new Guest());
+        LibraryFile libraryFile = new LibraryFile("books.xml", "xml");
         Reader reader = new ConsoleReader(new Scanner(System.in));
         Writer writer = new ConsoleWriter();
         AccountService accountService = new AccountService(new AccountDAOImpl(AccountService.FILE_PATH, AccountService.SEPARATOR));
@@ -25,9 +29,10 @@ public class Main {
         CommandFactory commandFactory = new CommandFactory();
         String userInput = reader.readLine();
         String[] arguments = userInput.split(" ");
+
         try {
-            String commandAsString = arguments[0];
-            Command command = commandFactory.createCommand(commandAsString, reader, writer, user, accountService);
+            String commandAsText = arguments[0];
+            Command command = commandFactory.createCommand(libraryFile, library, commandAsText, reader, writer, user, accountService);
             String result;
             if (CommandAuthorizer.isUserAuthorized(user, command)){
                 result = command.execute(arguments);
@@ -36,7 +41,7 @@ public class Main {
             }
 
             writer.writeLine(result);
-        }catch (IllegalArgumentException e){
+        }catch (IllegalArgumentException e) {
             writer.writeLine(e.getMessage());
         }
         writer.writeLine(user.getPermissionLevel().toString());

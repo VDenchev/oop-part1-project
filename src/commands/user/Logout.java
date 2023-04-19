@@ -1,9 +1,8 @@
 package commands.user;
 
 import commands.level.UserCommand;
-import contracts.Writer;
-import roles.Guest;
-import singleton.LoggedInUser;
+import models.roles.Guest;
+import models.singleton.LoggedInUser;
 
 public class Logout extends UserCommand {
     private LoggedInUser loggedInUser;

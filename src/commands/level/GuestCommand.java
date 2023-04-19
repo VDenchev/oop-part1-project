@@ -1,6 +1,5 @@
 package commands.level;
 
-import singleton.LoggedInUser;
 import enums.PermissionLevel;
 import contracts.Command;
 

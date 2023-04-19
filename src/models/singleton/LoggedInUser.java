@@ -1,4 +1,4 @@
-package singleton;
+package models.singleton;
 
 import contracts.User;
 import enums.PermissionLevel;

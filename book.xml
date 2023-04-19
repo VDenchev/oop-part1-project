@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<book>
+    <id>100</id>
+    <isbn>123124d23</isbn>
+    <title>omegalil</title>
+    <author>
+        <firstName>asddd</firstName>
+        <lastName>asdasdwe</lastName>
+    </author>
+    <genre>none</genre>
+    <publishingYear>2000</publishingYear>
+    <keywords>lol dsde</keywords>
+    <description>No description.</description>
+    <rating>ZERO_STARS</rating>
+</book>

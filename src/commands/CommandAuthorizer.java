@@ -2,7 +2,7 @@ package commands;
 
 import contracts.Command;
 import enums.PermissionLevel;
-import singleton.LoggedInUser;
+import models.singleton.LoggedInUser;
 
 public class CommandAuthorizer {
     public static boolean isUserAuthorized(LoggedInUser loggedInUser, Command command) {

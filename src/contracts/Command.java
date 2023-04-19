@@ -1,6 +1,5 @@
 package contracts;
 
-import singleton.LoggedInUser;
 import enums.PermissionLevel;
 
 

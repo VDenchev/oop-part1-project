@@ -3,8 +3,8 @@ package commands.login;
 import contracts.Account;
 import contracts.AccountDAO;
 import enums.PermissionLevel;
-import roles.Admin;
-import roles.Client;
+import models.roles.Admin;
+import models.roles.Client;
 
 import java.io.*;
 import java.util.ArrayList;

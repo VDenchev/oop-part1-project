@@ -5,28 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd6be47a-342f-4cde-8c77-7b415d825824" name="Changes" comment="Add log in functionality, accounts and skeleton for adding more commands">
-      <change afterPath="$PROJECT_DIR$/src/commands/CommandAuthorizer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commands/admin/Users.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commands/admin/UsersAdd.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commands/admin/UsersRemove.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commands/login/AccountDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commands/login/AccountService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commands/user/Logout.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/contracts/AccountDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/factories/CommandFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/commands/guest/Close.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/commands/guest/Open.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/jaxb/jakarta.activation.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/jaxb/jakarta.xml.bind-api.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/jaxb/jaxb-core.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/jaxb/jaxb-impl.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/book/Author.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/book/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/book/Library.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/book/Rating.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/parser/XmlMarshaller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/parser/XmlUnmarshaller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/singleton/LibraryFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OOP part 1 project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/OOP part 1 project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/CommandAuthorizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/CommandAuthorizer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/commands/guest/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/guest/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/level/AdminCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/level/AdminCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/commands/level/GuestCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/level/GuestCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/commands/level/UserCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/level/UserCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/login/AccountRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/login/LoginVerifier.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contracts/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/contracts/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/login/AccountDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/login/AccountDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/login/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/login/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/user/Logout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/user/Logout.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/contracts/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/contracts/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contracts/Repository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/files/accounts.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/files/accounts.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/roles/Guest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/roles/Guest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/factories/CommandFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/factories/CommandFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/roles/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/roles/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/roles/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/roles/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/roles/Guest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/roles/Guest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/singleton/LoggedInUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/singleton/LoggedInUser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +44,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -55,23 +63,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/coolb/IdeaProjects/OOP part 1 project/src",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "inlay.hints"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/coolb/IdeaProjects/OOP part 1 project/src/lib&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\coolb\IdeaProjects\OOP part 1 project\src\lib" />
       <recent name="C:\Users\coolb\IdeaProjects\OOP part 1 project\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\coolb\IdeaProjects\OOP part 1 project\src\lib\jaxb" />
+      <recent name="C:\Users\coolb\IdeaProjects\OOP part 1 project\src" />
       <recent name="C:\Users\coolb\IdeaProjects\OOP part 1 project\src\files" />
     </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="git sttus -s" />
+      <command value="git status -s" />
+      <command value="git status" />
+    </option>
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -114,7 +135,18 @@
       <workItem from="1680948563776" duration="511000" />
       <workItem from="1681407588013" duration="4485000" />
       <workItem from="1681466421997" duration="421000" />
-      <workItem from="1681912883150" duration="7291000" />
+      <workItem from="1681912883150" duration="9685000" />
+      <workItem from="1681993426685" duration="17245000" />
+      <workItem from="1682255150016" duration="5273000" />
+      <workItem from="1682357037556" duration="9073000" />
+      <workItem from="1682601462479" duration="496000" />
+      <workItem from="1682625799284" duration="5023000" />
+      <workItem from="1682708482301" duration="7715000" />
+      <workItem from="1682793045404" duration="2484000" />
+      <workItem from="1682799684065" duration="5074000" />
+      <workItem from="1682867508233" duration="12127000" />
+      <workItem from="1682883131306" duration="308000" />
+      <workItem from="1682883582275" duration="1582000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1679514872614</created>

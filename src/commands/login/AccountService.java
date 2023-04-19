@@ -2,7 +2,7 @@ package commands.login;
 
 import contracts.Account;
 import contracts.AccountDAO;
-import roles.Client;
+import models.roles.Client;
 
 import java.io.IOException;
 import java.util.List;

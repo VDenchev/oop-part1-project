@@ -5,7 +5,7 @@ import contracts.Account;
 import contracts.Reader;
 import contracts.Writer;
 import enums.PermissionLevel;
-import singleton.LoggedInUser;
+import models.singleton.LoggedInUser;
 import commands.level.GuestCommand;
 
 

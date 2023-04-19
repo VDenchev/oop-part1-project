@@ -1,4 +1,4 @@
-package roles;
+package models.roles;
 
 import contracts.User;
 import enums.PermissionLevel;
