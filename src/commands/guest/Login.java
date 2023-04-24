@@ -1,15 +1,17 @@
 package commands.guest;
 
-import commands.login.AccountService;
+import commands.services.AccountService;
 import contracts.Account;
 import contracts.Reader;
 import contracts.Writer;
 import enums.PermissionLevel;
-import models.singleton.LoggedInUser;
-import commands.level.GuestCommand;
+import models.roles.Visitor;
+import models.wrappers.LibraryFile;
+import models.wrappers.LoggedInUser;
+import commands.base.GuestCommand;
 
 
-public class Login extends GuestCommand {
+public class Login implements GuestCommand {
     private Reader reader;
     private Writer writer;
     private LoggedInUser loggedInUser;
@@ -41,5 +43,9 @@ public class Login extends GuestCommand {
         } catch (Exception e) {
             return e.getMessage();
         }
+    }
+    @Override
+    public String accept(Visitor visitor, String[] args, LibraryFile libraryFile) {
+        return visitor.visit(this, args, libraryFile);
     }
 }

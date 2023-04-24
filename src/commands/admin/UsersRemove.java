@@ -1,9 +1,11 @@
 package commands.admin;
 
-import commands.level.AdminCommand;
-import commands.login.AccountService;
+import commands.base.AdminCommand;
+import commands.services.AccountService;
+import models.roles.Visitor;
+import models.wrappers.LibraryFile;
 
-public class UsersRemove extends AdminCommand {
+public class UsersRemove implements AdminCommand {
 
     private AccountService accountService;
 
@@ -18,5 +20,9 @@ public class UsersRemove extends AdminCommand {
         } catch (Exception e) {
             return e.getMessage();
         }
+    }
+    @Override
+    public String accept(Visitor visitor, String[] args, LibraryFile libraryFile) {
+        return visitor.visit(this, args, libraryFile);
     }
 }

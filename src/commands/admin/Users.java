@@ -1,10 +1,12 @@
 package commands.admin;
 
-import commands.level.AdminCommand;
-import commands.login.AccountService;
-import contracts.Command;
+import commands.base.AdminCommand;
+import commands.services.AccountService;
+import commands.contracts.Command;
+import models.roles.Visitor;
+import models.wrappers.LibraryFile;
 
-public class Users extends AdminCommand {
+public class Users implements AdminCommand {
     private AccountService accountService;
 
     public Users(AccountService accountService) {
@@ -14,7 +16,7 @@ public class Users extends AdminCommand {
     @Override
     public String execute(String[] args) {
         //add logic for command arguments validation
-        String subcommandAsText = args[0];
+        String subcommandAsText = args[1];
         Command subcommand;
 
         switch (subcommandAsText.toUpperCase()){
@@ -24,5 +26,10 @@ public class Users extends AdminCommand {
         }
 
         return subcommand.execute(args);
+    }
+
+    @Override
+    public String accept(Visitor visitor, String[] args, LibraryFile libraryFile) {
+        return visitor.visit(this, args, libraryFile);
     }
 }

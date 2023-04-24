@@ -1,16 +1,17 @@
-import commands.CommandAuthorizer;
 import commands.ConsoleReader;
 import commands.ConsoleWriter;
-import commands.login.AccountDAOImpl;
-import commands.login.AccountService;
-import contracts.Command;
+import dao.AccountDAOImpl;
+import commands.services.AccountService;
+import commands.contracts.Command;
 import contracts.Reader;
 import contracts.Writer;
-import factories.CommandFactory;
+import commands.factories.CommandFactory;
 import models.book.Library;
+import models.parser.XmlParser;
+import models.parser.contracts.IParser;
 import models.roles.Guest;
-import models.singleton.LibraryFile;
-import models.singleton.LoggedInUser;
+import models.wrappers.LibraryFile;
+import models.wrappers.LoggedInUser;
 
 
 import java.util.Scanner;
@@ -24,27 +25,31 @@ public class Main {
         LibraryFile libraryFile = new LibraryFile("books.xml", "xml");
         Reader reader = new ConsoleReader(new Scanner(System.in));
         Writer writer = new ConsoleWriter();
+        IParser parser = new XmlParser();
         AccountService accountService = new AccountService(new AccountDAOImpl(AccountService.FILE_PATH, AccountService.SEPARATOR));
-
         CommandFactory commandFactory = new CommandFactory();
-        String userInput = reader.readLine();
-        String[] arguments = userInput.split(" ");
 
-        try {
-            String commandAsText = arguments[0];
-            Command command = commandFactory.createCommand(libraryFile, library, commandAsText, reader, writer, user, accountService);
-            String result;
-            if (CommandAuthorizer.isUserAuthorized(user, command)){
-                result = command.execute(arguments);
-            } else {
-                result = "You don't have access to this command!";
+        while (true) {
+            System.out.print("Enter command:");
+            String userInput = reader.readLine();
+            String[] arguments = userInput.split(" ");
+
+            try {
+                String commandAsText = arguments[0];
+                Command command = commandFactory.createCommand(commandAsText, libraryFile, library, parser, reader, writer, user, accountService);
+                String result;
+                if (commandAsText.equalsIgnoreCase("EXIT")){
+                    result = "Exiting the program...";
+                    writer.writeLine(result);
+                    break;
+                }
+                result = command.accept(user.getUser(), arguments, libraryFile);
+                writer.writeLine(result);
+            } catch (IllegalArgumentException e) {
+                writer.writeLine(e.getMessage());
             }
-
-            writer.writeLine(result);
-        }catch (IllegalArgumentException e) {
-            writer.writeLine(e.getMessage());
+            writer.writeLine(user.getPermissionLevel().toString());
         }
-        writer.writeLine(user.getPermissionLevel().toString());
     }
 
 }

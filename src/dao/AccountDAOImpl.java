@@ -1,4 +1,4 @@
-package commands.login;
+package dao;
 
 import contracts.Account;
 import contracts.AccountDAO;

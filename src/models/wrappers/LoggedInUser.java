@@ -1,4 +1,4 @@
-package models.singleton;
+package models.wrappers;
 
 import contracts.User;
 import enums.PermissionLevel;
