@@ -8,8 +8,14 @@ import models.roles.Visitor;
 import models.wrappers.LibraryFile;
 
 import java.io.File;
+import java.util.List;
 
 public class Save implements GuestCommand {
+    public static final String ERROR_SAVING_TO_FILE = "An error has occurred while saving to %s!";
+    public static final String SUCCESS_MESSAGE = "Successfully saved %s!";
+    public static final String INCORRECT_USAGE = "Incorrect usage! Try typing: save";
+    public static final int CORRECT_ARGS_COUNT = 1;
+
     private LibraryFile libraryFile;
     private Library library;
     private IMarshaller marshaller;
@@ -21,19 +27,28 @@ public class Save implements GuestCommand {
     }
 
     @Override
-    public String execute(String[] args) {
+    public String execute(List<String> args) {
         File file = new File(libraryFile.getFile());
         String fileName = libraryFile.getFile();
+
         try {
             marshaller.marshal(library, file);
         } catch (ParserException e) {
-            return "An error has occurred while saving to " + fileName + "!";
+            return String.format(ERROR_SAVING_TO_FILE, fileName);
             //logger
         }
-        return "Successfully saved " + fileName + "!";
+        return String.format(SUCCESS_MESSAGE, fileName);
     }
     @Override
-    public String accept(Visitor visitor, String[] args, LibraryFile libraryFile) {
+    public String accept(Visitor visitor, List<String> args, LibraryFile libraryFile) {
+        if(!isValidArgsCount(args.size())) {
+            return INCORRECT_USAGE;
+        }
         return visitor.visit(this, args, libraryFile);
+    }
+
+    @Override
+    public boolean isValidArgsCount(int argsCount) {
+        return argsCount >= CORRECT_ARGS_COUNT;
     }
 }

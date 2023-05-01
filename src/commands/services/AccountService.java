@@ -24,7 +24,7 @@ public class AccountService {
 
     public Account getAccountFromFile(String username, String password) throws IOException {
         Account account = accountDAO.get(username, password);
-        if (account == null){
+        if (account == null) {
             throw new IllegalArgumentException(ACCOUNT_NOT_FOUND);
         }
 
@@ -32,7 +32,7 @@ public class AccountService {
     }
 
     public void addAccountToFile(String username, String password) throws IOException {
-        if (isUsernameTaken(username)){
+        if (isUsernameTaken(username)) {
             throw new IllegalArgumentException(USERNAME_TAKEN);
         }
 
@@ -40,23 +40,23 @@ public class AccountService {
         accountDAO.add(account);
     }
 
+    public void removeAccountFromFile(String username) throws IOException {
+        if (!isUsernameTaken(username)) {
+            throw new IllegalArgumentException(USERNAME_NOT_FOUND);
+        }
+
+        accountDAO.remove(username);
+    }
+
     public boolean isUsernameTaken(String username) throws IOException {
         List<Account> accounts = accountDAO.getAll();
 
         for (Account account : accounts) {
-            if (account.getUsername().equalsIgnoreCase(username)){
+            if (account.getUsername().equalsIgnoreCase(username)) {
                 return true;
             }
         }
 
         return false;
-    }
-
-    public void removeAccountFromFile(String username) throws IOException {
-        if (!isUsernameTaken(username)){
-            throw new IllegalArgumentException(USERNAME_NOT_FOUND);
-        }
-
-        accountDAO.remove(username);
     }
 }

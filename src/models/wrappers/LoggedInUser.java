@@ -20,7 +20,7 @@ public class LoggedInUser {
         return user;
     }
 
-    public PermissionLevel getPermissionLevel(){
+    public PermissionLevel getPermissionLevel() {
         return user.getPermissionLevel();
     }
 

@@ -26,7 +26,7 @@ public class XmlParser implements IParser {
     public Library unmarshal(Class<Library> libraryClass, File file) throws ParserException {
         try {
             JAXBContext context = JAXBContext.newInstance(libraryClass);
-            return libraryClass.cast(context.createUnmarshaller().unmarshal(file));
+            return (Library) (context.createUnmarshaller().unmarshal(file));
         } catch(JAXBException e) {
             throw new ParserException(e.getMessage(), e);
         }

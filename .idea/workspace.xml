@@ -5,41 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd6be47a-342f-4cde-8c77-7b415d825824" name="Changes" comment="Add log in functionality, accounts and skeleton for adding more commands">
-      <change afterPath="$PROJECT_DIR$/src/commands/guest/Save.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commands/guest/SaveAs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/parser/XmlParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/parser/contracts/IMarshaller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/parser/contracts/IParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/parser/contracts/IUnmarshaller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/parser/exceptions/ParserException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/roles/Visitor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/books.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/commands/client/Books.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/commands/client/BooksAll.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/commands/client/BooksFind.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/commands/client/BooksInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/commands/client/BooksRemove.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/commands/guest/WrongCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kekw.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/CommandAuthorizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/utils/CommandAuthorizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/ConsoleReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/ConsoleReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/commands/admin/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/admin/Users.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/commands/admin/UsersAdd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/admin/UsersAdd.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/commands/admin/UsersRemove.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/admin/UsersRemove.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/client/Logout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/client/Logout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/contracts/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/contracts/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/factories/CommandFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/factories/CommandFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/commands/guest/Close.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/guest/Close.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/commands/guest/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/guest/Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/commands/guest/Open.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/guest/Open.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/level/AdminCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/base/AdminCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/level/GuestCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/base/GuestCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/level/UserCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/base/ClientCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/login/AccountDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/AccountDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/login/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/services/AccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/user/Logout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/client/Logout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contracts/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/contracts/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contracts/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/contracts/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/factories/CommandFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/factories/CommandFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/parser/XmlMarshaller.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/parser/XmlUnmarshaller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/guest/Save.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/guest/Save.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/guest/SaveAs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/guest/SaveAs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/services/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/services/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contracts/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/contracts/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/AccountDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/AccountDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/book/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/book/Author.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/book/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/book/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/book/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/book/Library.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/book/Rating.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/book/Rating.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/parser/XmlParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/parser/XmlParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/parser/exceptions/ParserException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/parser/exceptions/ParserException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/roles/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/roles/Admin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/roles/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/roles/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/roles/Guest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/roles/Guest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/singleton/LibraryFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/wrappers/LibraryFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/singleton/LoggedInUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/wrappers/LoggedInUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/roles/Visitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/roles/Visitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/wrappers/LoggedInUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/wrappers/LoggedInUser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,8 +50,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -76,10 +76,10 @@
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/Users/coolb/IdeaProjects/OOP part 1 project/src/lib",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
+    "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+    "settings.editor.selected.configurable": "tasks.servers"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -88,6 +88,7 @@
       <recent name="C:\Users\coolb\IdeaProjects\OOP part 1 project\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\coolb\IdeaProjects\OOP part 1 project" />
       <recent name="C:\Users\coolb\IdeaProjects\OOP part 1 project\src\lib\jaxb" />
       <recent name="C:\Users\coolb\IdeaProjects\OOP part 1 project\src" />
       <recent name="C:\Users\coolb\IdeaProjects\OOP part 1 project\src\files" />
@@ -170,6 +171,16 @@
       <workItem from="1683043303740" duration="6903000" />
       <workItem from="1683209284189" duration="14509000" />
       <workItem from="1683303923316" duration="16069000" />
+      <workItem from="1683392122951" duration="2669000" />
+      <workItem from="1683538443743" duration="17872000" />
+      <workItem from="1683641943114" duration="14298000" />
+      <workItem from="1683731000305" duration="3970000" />
+      <workItem from="1683750234875" duration="3402000" />
+      <workItem from="1683754413150" duration="1687000" />
+      <workItem from="1683803972948" duration="3754000" />
+      <workItem from="1683809687770" duration="23528000" />
+      <workItem from="1683916257996" duration="2438000" />
+      <workItem from="1683970407551" duration="912000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1679514872614</created>
@@ -214,5 +225,9 @@
     <MESSAGE value="Update gitignore" />
     <MESSAGE value="Add log in functionality, accounts and skeleton for adding more commands" />
     <option name="LAST_COMMIT_MESSAGE" value="Add log in functionality, accounts and skeleton for adding more commands" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

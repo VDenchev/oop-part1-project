@@ -14,6 +14,9 @@ import models.wrappers.LibraryFile;
 import models.wrappers.LoggedInUser;
 
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -31,18 +34,19 @@ public class Main {
 
         while (true) {
             System.out.print("Enter command:");
-            String userInput = reader.readLine();
-            String[] arguments = userInput.split(" ");
+            String userInput = reader.readLine().trim();
+            List<String> arguments = new ArrayList<>(Arrays.asList(userInput.split("\\s+")));
 
             try {
-                String commandAsText = arguments[0];
-                Command command = commandFactory.createCommand(commandAsText, libraryFile, library, parser, reader, writer, user, accountService);
+                String commandAsText = arguments.get(0);
                 String result;
                 if (commandAsText.equalsIgnoreCase("EXIT")){
                     result = "Exiting the program...";
                     writer.writeLine(result);
                     break;
                 }
+
+                Command command = commandFactory.createCommand(commandAsText, libraryFile, library, parser, reader, writer, user, accountService);
                 result = command.accept(user.getUser(), arguments, libraryFile);
                 writer.writeLine(result);
             } catch (IllegalArgumentException e) {

@@ -15,7 +15,7 @@ public enum Rating {
     }
 
     public static Rating getByDescripton(String description) {
-        if(description != null){
+        if(description != null) {
             for (Rating rating : Rating.values()) {
                 for (String desc : rating.descriptionList) {
                     if (desc.equalsIgnoreCase(description)) {
@@ -27,4 +27,8 @@ public enum Rating {
         throw new IllegalArgumentException("Invalid rating value!");
     }
 
+    @Override
+    public String toString() {
+        return descriptionList[3];
+    }
 }

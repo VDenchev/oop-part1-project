@@ -4,7 +4,7 @@ import enums.PermissionLevel;
 
 import java.util.Objects;
 
-public abstract class Account implements User{
+public abstract class Account implements User {
     private String username;
     private String password;
     private PermissionLevel permissionLevel;

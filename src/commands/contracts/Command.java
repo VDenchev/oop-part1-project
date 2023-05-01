@@ -1,11 +1,13 @@
 package commands.contracts;
 
-import enums.PermissionLevel;
 import models.roles.Visitor;
 import models.wrappers.LibraryFile;
 
+import java.util.List;
+
 
 public interface Command {
-    String execute(String[] args);
-    String accept(Visitor visitor, String[] args, LibraryFile libraryFile);
+    String execute(List<String> args);
+    String accept(Visitor visitor, List<String> args, LibraryFile libraryFile);
+    boolean isValidArgsCount(int argsCount);
 }

@@ -28,19 +28,18 @@ public class Book {
         this.rating = builder.rating;
     }
 
-    public Book() {
-    }
+    protected Book() {}
 
     public static class Builder {
         private int id ;
         private String isbn;
         private String title;
         private Author author;
-        private String genre = "none";
+        private String genre;
         private int publishingYear;
-        private String[] keywords = {"none"};
-        private String description = "No description.";
-        private Rating rating = Rating.ZERO_STARS;
+        private String[] keywords;
+        private String description;
+        private Rating rating;
 
         public Builder(int id, String isbn, String title, Author author, int publishingYear) {
             this.id = id;
@@ -48,6 +47,10 @@ public class Book {
             this.title = title;
             this.author = author;
             this.publishingYear = publishingYear;
+            genre = "none";
+            keywords = new String[]{"none"};
+            description = "No description.";
+            rating = Rating.ZERO_STARS;
         }
 
         public Builder setGenre(String genre) {
@@ -75,6 +78,21 @@ public class Book {
 
             return new Book(this);
         }
+    }
+
+    @Override
+    public String toString() {
+        return "========== BOOK INFORMATION ==========\n" +
+                "id: " + id + "\n" +
+                "title: " + title + "\n" +
+                "author: " + author + "\n" +
+                "description: " + description + "\n" +
+                "isbn: " + isbn + "\n" +
+                "genre: " + genre + "\n" +
+                "keywords: " + String.join(", ", keywords) + "\n" +
+                "year published: " + publishingYear + "\n" +
+                "rating: " + rating + "\n" +
+                "======================================";
     }
 
     @Override
@@ -136,4 +154,39 @@ public class Book {
         return rating;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setAuthor(Author author) {
+        this.author = author;
+    }
+
+    public void setGenre(String genre) {
+        this.genre = genre;
+    }
+
+    public void setPublishingYear(int publishingYear) {
+        this.publishingYear = publishingYear;
+    }
+
+    public void setKeywords(String[] keywords) {
+        this.keywords = keywords;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setRating(Rating rating) {
+        this.rating = rating;
+    }
 }

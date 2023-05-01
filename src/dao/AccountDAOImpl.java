@@ -22,7 +22,7 @@ public class AccountDAOImpl implements AccountDAO {
     }
 
     @Override
-    public List<Account> getAll() throws IOException{
+    public List<Account> getAll() throws IOException {
         Scanner scanner = new Scanner(new File(path));
         List<Account> accounts = new ArrayList<>();
 
@@ -35,7 +35,7 @@ public class AccountDAOImpl implements AccountDAO {
                 PermissionLevel permissionLevel = PermissionLevel.valueOf(parts[2]);
 
                 Account account;
-                if (permissionLevel == PermissionLevel.ADMIN){
+                if (permissionLevel == PermissionLevel.ADMIN) {
                     account = new Admin(username, password);
                 } else {
                     account = new Client(username, password);
@@ -49,7 +49,7 @@ public class AccountDAOImpl implements AccountDAO {
     }
 
     @Override
-    public Account get(String username, String password) throws IOException{
+    public Account get(String username, String password) throws IOException {
         List<Account> accounts = getAll();
         for (Account account: accounts) {
             if (account.getUsername().equalsIgnoreCase(username) && account.getPassword().equals(password)){
@@ -60,7 +60,7 @@ public class AccountDAOImpl implements AccountDAO {
     }
 
     @Override
-    public void add(Account account) throws IOException{
+    public void add(Account account) throws IOException {
         PrintWriter printWriter = new PrintWriter(new FileWriter(path, true));
         printWriter.println(account);
 
@@ -68,11 +68,11 @@ public class AccountDAOImpl implements AccountDAO {
     }
 
     @Override
-    public void remove(String username) throws IOException{
+    public void remove(String username) throws IOException {
         List<Account> accounts = getAll();
         Iterator<Account> itr = accounts.iterator();
 
-        while (itr.hasNext()){
+        while (itr.hasNext()) {
             if (itr.next().getUsername().equalsIgnoreCase(username)){
                 itr.remove();
             }

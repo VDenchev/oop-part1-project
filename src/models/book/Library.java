@@ -17,7 +17,7 @@ public class Library {
 
     @XmlElement(name = "book")
     public Set<Book> getBooks() {
-        return new LinkedHashSet<>(books);
+        return books;
     }
 
     public void setBooks(Set<Book> books) {
@@ -34,7 +34,7 @@ public class Library {
         }
     }
 
-    public void removeBook(int id){
+    public void removeBookById(int id) {
         Iterator<Book> iterator= books.iterator();
         while (iterator.hasNext()) {
             if (iterator.next().getId() == id) {
@@ -45,4 +45,48 @@ public class Library {
         throw new IllegalArgumentException("There is no book with id " + id);
     }
 
+    public Book getBookById(int id) {
+        for (Book book : books) {
+            if (book.getId() == id) {
+                return book;
+            }
+        }
+        return null;
+    }
+
+    public Set<Book> getBooksByTitle(String title) {
+        Set<Book> matchingBooks = new LinkedHashSet<>();
+
+        for (Book book : books) {
+            if (book.getTitle().contains(title)) {
+                matchingBooks.add(book);
+            }
+        }
+        return Set.copyOf(matchingBooks);
+    }
+
+    public Set<Book> getBooksByAuthorFullName(String fullName) {
+        Set<Book> matchingBooks = new LinkedHashSet<>();
+
+        for (Book book : books) {
+            if (book.getAuthor().getFullName().contains(fullName)) {
+                matchingBooks.add(book);
+            }
+        }
+        return Set.copyOf(matchingBooks);
+    }
+
+    public Set<Book> getBooksByKeyword(String keyword) {
+        Set<Book> matchingBooks = new LinkedHashSet<>();
+
+        for (Book book : books) {
+            String[] keywords = book.getKeywords();
+            for (String currKeyword : keywords) {
+                if (currKeyword.equals(keyword)) {
+                    matchingBooks.add(book);
+                }
+            }
+        }
+        return Set.copyOf(matchingBooks);
+    }
 }
