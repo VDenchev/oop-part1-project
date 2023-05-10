@@ -14,7 +14,7 @@ public enum Rating {
         this.descriptionList = descriptionList;
     }
 
-    public static Rating getByDescripton(String description) {
+    public static Rating getByDescription(String description) {
         if(description != null) {
             for (Rating rating : Rating.values()) {
                 for (String desc : rating.descriptionList) {

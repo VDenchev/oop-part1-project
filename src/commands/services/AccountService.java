@@ -1,20 +1,16 @@
 package commands.services;
 
-import contracts.Account;
-import contracts.AccountDAO;
+import models.roles.contracts.Account;
+import commands.dao.contracts.AccountDAO;
 import models.roles.Client;
 
 import java.io.IOException;
 import java.util.List;
 
 public class AccountService {
-    //TODO move up constants
-    public static final String FILE_PATH = "src\\files\\accounts.txt";
-    public static final String SEPARATOR = ":";
-
-    public static final String ACCOUNT_NOT_FOUND = "Wrong credentials!";
-    public static final String USERNAME_TAKEN = "This username has already been taken!";
-    public static final String USERNAME_NOT_FOUND = "There is no account with that username!";
+    public static final String ACCOUNT_NOT_FOUND_MESSAGE = "Wrong credentials!";
+    public static final String USERNAME_TAKEN_MESSAGE = "This username is already taken!";
+    public static final String USERNAME_NOT_FOUND_MESSAGE = "There is no account with such username!";
 
     private AccountDAO accountDAO;
 
@@ -24,16 +20,18 @@ public class AccountService {
 
     public Account getAccountFromFile(String username, String password) throws IOException {
         Account account = accountDAO.get(username, password);
-        if (account == null) {
-            throw new IllegalArgumentException(ACCOUNT_NOT_FOUND);
+        boolean accountNotFound = account == null;
+
+        if (accountNotFound) {
+            throw new IllegalArgumentException(ACCOUNT_NOT_FOUND_MESSAGE);
         }
 
         return account;
     }
 
     public void addAccountToFile(String username, String password) throws IOException {
-        if (isUsernameTaken(username)) {
-            throw new IllegalArgumentException(USERNAME_TAKEN);
+        if (usernameExists(username)) {
+            throw new IllegalArgumentException(USERNAME_TAKEN_MESSAGE);
         }
 
         Account account = new Client(username, password);
@@ -41,14 +39,14 @@ public class AccountService {
     }
 
     public void removeAccountFromFile(String username) throws IOException {
-        if (!isUsernameTaken(username)) {
-            throw new IllegalArgumentException(USERNAME_NOT_FOUND);
+        if (!usernameExists(username)) {
+            throw new IllegalArgumentException(USERNAME_NOT_FOUND_MESSAGE);
         }
 
         accountDAO.remove(username);
     }
 
-    public boolean isUsernameTaken(String username) throws IOException {
+    public boolean usernameExists(String username) throws IOException {
         List<Account> accounts = accountDAO.getAll();
 
         for (Account account : accounts) {

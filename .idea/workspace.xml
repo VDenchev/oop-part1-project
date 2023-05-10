@@ -1,45 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="OOP_part_1_project:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd6be47a-342f-4cde-8c77-7b415d825824" name="Changes" comment="Add log in functionality, accounts and skeleton for adding more commands">
-      <change afterPath="$PROJECT_DIR$/books.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commands/client/Books.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commands/client/BooksAll.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commands/client/BooksFind.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commands/client/BooksInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commands/client/BooksRemove.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commands/guest/WrongCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/commands/CommandLoop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/commands/implementations/books/BooksAdd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/commands/implementations/books/BooksSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/book/comparators/BookAuthorComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/book/comparators/BookRatingComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/book/comparators/BookTitleComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/book/comparators/BookYearComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/book/comparators/ReverseComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/InsertionSort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OOP part 1 project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/OOP part 1 project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/books.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/ConsoleReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/ConsoleReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/admin/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/admin/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/admin/UsersAdd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/admin/UsersAdd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/admin/UsersRemove.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/admin/UsersRemove.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/client/Logout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/client/Logout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/ConsoleReader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/ConsoleWriter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/admin/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/implementations/users/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/admin/UsersAdd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/implementations/users/UsersAdd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/admin/UsersRemove.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/implementations/users/UsersRemove.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/base/AdminCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/contracts/AdminCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/base/ClientCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/contracts/ClientCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/base/GuestCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/contracts/GuestCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/client/Books.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/implementations/books/Books.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/client/BooksAll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/implementations/books/BooksAll.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/client/BooksFind.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/implementations/books/BooksFind.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/client/BooksInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/implementations/books/BooksInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/client/BooksRemove.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/implementations/books/BooksRemove.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/client/Logout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/implementations/authentication/Logout.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/commands/contracts/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/contracts/Command.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/commands/factories/CommandFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/factories/CommandFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/guest/Close.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/guest/Close.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/guest/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/guest/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/guest/Open.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/guest/Open.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/guest/Save.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/guest/Save.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/guest/SaveAs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/guest/SaveAs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/guest/Close.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/implementations/file/Close.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/guest/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/implementations/authentication/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/guest/Open.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/implementations/file/Open.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/guest/Save.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/implementations/file/Save.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/guest/SaveAs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/implementations/file/SaveAs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/guest/WrongCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/implementations/WrongCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/commands/services/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/services/AccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contracts/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/contracts/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/AccountDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/AccountDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contracts/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/roles/contracts/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contracts/AccountDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/dao/contracts/AccountDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contracts/Reader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contracts/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/roles/contracts/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contracts/Writer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/AccountDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/dao/AccountDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/enums/PermissionLevel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/roles/PermissionLevel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/files/accounts.txt" beforeDir="false" afterPath="$PROJECT_DIR$/files/accounts.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/jaxb/jakarta.activation.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/jaxb/jakarta.xml.bind-api.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/jaxb/jaxb-core.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/jaxb/jaxb-impl.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/book/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/book/Author.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/book/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/book/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/book/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/book/Library.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/book/Rating.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/book/Rating.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/parser/XmlParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/parser/XmlParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/parser/exceptions/ParserException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/parser/exceptions/ParserException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/roles/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/roles/Admin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/roles/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/roles/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/roles/Guest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/roles/Guest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/roles/Visitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/roles/Visitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/wrappers/LoggedInUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/wrappers/LoggedInUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/roles/Visitor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/wrappers/LibraryFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/wrappers/LibraryFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/wrappers/LoggedInUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/wrappers/CurrentUser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,12 +100,17 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/coolb/IdeaProjects/OOP part 1 project/src/lib",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "C:/Users/coolb/IdeaProjects/OOP part 1 project",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDKs",
+    "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "tasks.servers"
@@ -84,10 +118,13 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\coolb\IdeaProjects\OOP part 1 project\src\lib\jaxb1" />
+      <recent name="C:\Users\coolb\IdeaProjects\OOP part 1 project\src\lib\jaxb\jaxb1" />
       <recent name="C:\Users\coolb\IdeaProjects\OOP part 1 project\src\lib" />
       <recent name="C:\Users\coolb\IdeaProjects\OOP part 1 project\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\coolb\IdeaProjects\OOP part 1 project\files" />
       <recent name="C:\Users\coolb\IdeaProjects\OOP part 1 project" />
       <recent name="C:\Users\coolb\IdeaProjects\OOP part 1 project\src\lib\jaxb" />
       <recent name="C:\Users\coolb\IdeaProjects\OOP part 1 project\src" />
@@ -101,41 +138,14 @@
       <command value="git status" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="OOP part 1 project" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Visitor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="models.roles.Visitor" />
-      <module name="OOP part 1 project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="models.roles.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="maskwithsterik" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="maskwithsterik" />
-      <module name="OOP part 1 project" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Visitor" />
-        <item itemvalue="Application.maskwithsterik" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -180,7 +190,12 @@
       <workItem from="1683803972948" duration="3754000" />
       <workItem from="1683809687770" duration="23528000" />
       <workItem from="1683916257996" duration="2438000" />
-      <workItem from="1683970407551" duration="912000" />
+      <workItem from="1683970407551" duration="11626000" />
+      <workItem from="1684052138735" duration="10824000" />
+      <workItem from="1684663294616" duration="39026000" />
+      <workItem from="1684849706682" duration="13347000" />
+      <workItem from="1684946563058" duration="7259000" />
+      <workItem from="1685181373776" duration="13151000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1679514872614</created>
@@ -229,5 +244,8 @@
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/OOP_part_1_project$Main__2_.ic" NAME="Main (2) Coverage Results" MODIFIED="1684700358229" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

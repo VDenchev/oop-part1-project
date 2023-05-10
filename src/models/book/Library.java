@@ -29,13 +29,13 @@ public class Library {
     }
 
     public void addBook(Book book) {
-        if(!books.add(book)){
+        if(!books.add(book)) {
             throw new IllegalArgumentException("Book with id " + book.getId() + " already exists!");
         }
     }
 
     public void removeBookById(int id) {
-        Iterator<Book> iterator= books.iterator();
+        Iterator<Book> iterator = books.iterator();
         while (iterator.hasNext()) {
             if (iterator.next().getId() == id) {
                 iterator.remove();
@@ -45,9 +45,9 @@ public class Library {
         throw new IllegalArgumentException("There is no book with id " + id);
     }
 
-    public Book getBookById(int id) {
+    public Book getBookByIsbn(String isbn) {
         for (Book book : books) {
-            if (book.getId() == id) {
+            if (book.getIsbn().toUpperCase().contains(isbn.toUpperCase())) {
                 return book;
             }
         }
@@ -58,22 +58,22 @@ public class Library {
         Set<Book> matchingBooks = new LinkedHashSet<>();
 
         for (Book book : books) {
-            if (book.getTitle().contains(title)) {
+            if (book.getTitle().toUpperCase().contains(title.toUpperCase())) {
                 matchingBooks.add(book);
             }
         }
-        return Set.copyOf(matchingBooks);
+        return matchingBooks;
     }
 
     public Set<Book> getBooksByAuthorFullName(String fullName) {
         Set<Book> matchingBooks = new LinkedHashSet<>();
 
         for (Book book : books) {
-            if (book.getAuthor().getFullName().contains(fullName)) {
+            if (book.getTitle().toUpperCase().contains(fullName.toUpperCase())) {
                 matchingBooks.add(book);
             }
         }
-        return Set.copyOf(matchingBooks);
+        return matchingBooks;
     }
 
     public Set<Book> getBooksByKeyword(String keyword) {
@@ -82,11 +82,11 @@ public class Library {
         for (Book book : books) {
             String[] keywords = book.getKeywords();
             for (String currKeyword : keywords) {
-                if (currKeyword.equals(keyword)) {
+                if (currKeyword.equalsIgnoreCase(keyword)) {
                     matchingBooks.add(book);
                 }
             }
         }
-        return Set.copyOf(matchingBooks);
+        return matchingBooks;
     }
 }

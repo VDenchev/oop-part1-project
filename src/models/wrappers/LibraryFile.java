@@ -9,14 +9,18 @@ public class LibraryFile {
         setFile(file);
     }
 
+    public LibraryFile(String extension) {
+        this.extension = extension;
+    }
+
     public boolean fileExtensionMatches(String file) {
-        String fileExtension = "";
+        String targetExtension = "";
         int index = file.lastIndexOf(".");
         if (index != -1) {
-            fileExtension = file.substring(index + 1);
+            targetExtension = file.substring(index + 1);
         }
 
-        return extension.equals(fileExtension);
+        return targetExtension.equals(extension);
     }
 
     public void setFile(String file) {

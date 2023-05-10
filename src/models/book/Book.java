@@ -138,8 +138,8 @@ public class Book {
         return publishingYear;
     }
 
-    //@XmlElementWrapper(name = "keywords")@XmlElement(name = "keyword")
-    @XmlList
+    @XmlElementWrapper(name = "keywords")
+    @XmlElement(name = "keyword")
     public String[] getKeywords() {
         return keywords;
     }

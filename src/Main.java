@@ -1,59 +1,30 @@
-import commands.ConsoleReader;
-import commands.ConsoleWriter;
-import dao.AccountDAOImpl;
+import commands.CommandLoop;
+import commands.dao.AccountDAOImpl;
 import commands.services.AccountService;
-import commands.contracts.Command;
-import contracts.Reader;
-import contracts.Writer;
 import commands.factories.CommandFactory;
 import models.book.Library;
 import models.parser.XmlParser;
 import models.parser.contracts.IParser;
-import models.roles.Guest;
 import models.wrappers.LibraryFile;
-import models.wrappers.LoggedInUser;
+import models.wrappers.CurrentUser;
 
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws Exception{
-        Library library = new Library();
+    public static final String FILE_PATH = "files\\accounts.txt";
+    public static final String SEPARATOR = ":";
 
-        LoggedInUser user = LoggedInUser.getInstance();
-        user.setUser(new Guest());
-        LibraryFile libraryFile = new LibraryFile("books.xml", "xml");
-        Reader reader = new ConsoleReader(new Scanner(System.in));
-        Writer writer = new ConsoleWriter();
+    public static void main(String[] args) {
+        Library library = new Library();
+        CurrentUser user = CurrentUser.getInstance();
+        LibraryFile libraryFile = new LibraryFile("xml");
+        Scanner scanner = new Scanner(System.in);
         IParser parser = new XmlParser();
-        AccountService accountService = new AccountService(new AccountDAOImpl(AccountService.FILE_PATH, AccountService.SEPARATOR));
+        AccountService accountService = new AccountService(new AccountDAOImpl(FILE_PATH, SEPARATOR));
         CommandFactory commandFactory = new CommandFactory();
 
-        while (true) {
-            System.out.print("Enter command:");
-            String userInput = reader.readLine().trim();
-            List<String> arguments = new ArrayList<>(Arrays.asList(userInput.split("\\s+")));
-
-            try {
-                String commandAsText = arguments.get(0);
-                String result;
-                if (commandAsText.equalsIgnoreCase("EXIT")){
-                    result = "Exiting the program...";
-                    writer.writeLine(result);
-                    break;
-                }
-
-                Command command = commandFactory.createCommand(commandAsText, libraryFile, library, parser, reader, writer, user, accountService);
-                result = command.accept(user.getUser(), arguments, libraryFile);
-                writer.writeLine(result);
-            } catch (IllegalArgumentException e) {
-                writer.writeLine(e.getMessage());
-            }
-            writer.writeLine(user.getPermissionLevel().toString());
-        }
+        CommandLoop commandLoop = new CommandLoop(library, user, libraryFile, parser, accountService, commandFactory, scanner);
+        commandLoop.start();
     }
 
 }

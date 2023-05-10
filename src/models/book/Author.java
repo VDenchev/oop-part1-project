@@ -9,7 +9,7 @@ public class Author {
     private String firstName;
     private String lastName;
 
-    public Author(Builder builder) {
+    private Author(Builder builder) {
         this.firstName = builder.firstName;
         this.lastName = builder.lastName;
     }
@@ -46,7 +46,7 @@ public class Author {
     }
 
     public String getFullName() {
-        return firstName + (lastName.isBlank() ? "" : (" " + lastName));
+        return firstName + (lastName.isBlank() ? "" : " " + lastName);
     }
 
     protected void setFirstName(String firstName) {

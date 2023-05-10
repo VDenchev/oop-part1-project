@@ -1,24 +1,27 @@
 package models.roles;
 
-import commands.base.AdminCommand;
-import commands.base.ClientCommand;
-import commands.base.GuestCommand;
+import commands.contracts.AdminCommand;
+import commands.contracts.ClientCommand;
+import commands.contracts.GuestCommand;
 import commands.contracts.Command;
-import commands.guest.Open;
-import contracts.Account;
-import enums.PermissionLevel;
+import commands.implementations.authentication.Login;
+import commands.implementations.file.Open;
+import models.roles.contracts.Account;
 import models.wrappers.LibraryFile;
 
 import java.util.List;
 
 public class Admin extends Account {
+    public static final String FILE_NOT_OPENED_MESSAGE = "You must open a file first! Use command: open <filename>";
+    public static final String ALREADY_LOGGED_IN_MESSAGE = "You are already logged in!";
+
     public Admin(String username, String password) {
         super(username, password, PermissionLevel.ADMIN);
     }
 
     @Override
     public String defaultVisit(Command command, List<String> args, LibraryFile libraryFile) {
-        return libraryFile.isFileOpened() ? command.execute(args) : "You must open a file first! Use command: open <filename>";
+        return libraryFile.isFileOpened() ? command.execute(args) : FILE_NOT_OPENED_MESSAGE;
     }
 
     @Override
@@ -39,5 +42,10 @@ public class Admin extends Account {
     @Override
     public String visit(Open open, List<String> args, LibraryFile libraryFile) {
         return open.execute(args);
+    }
+
+    @Override
+    public String visit(Login login, List<String> args, LibraryFile libraryFile) {
+        return ALREADY_LOGGED_IN_MESSAGE;
     }
 }
