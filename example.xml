@@ -1,0 +1,870 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<library>
+    <book>
+        <id>1</id>
+        <isbn>9780123456789</isbn>
+        <title>The Great Gatsby</title>
+        <author>
+            <firstName>F. Scott</firstName>
+            <lastName>Fitzgerald</lastName>
+        </author>
+        <genre>Classic</genre>
+        <publishingYear>1925</publishingYear>
+        <keywords>
+            <keyword>fiction</keyword>
+            <keyword>romance</keyword>
+        </keywords>
+        <description>A tragic love story set in the Jazz Age.</description>
+        <rating>FOUR_STARS</rating>
+    </book>
+    <book>
+        <id>2</id>
+        <isbn>9780140449334</isbn>
+        <title>The Odyssey</title>
+        <author>
+            <firstName>Homer</firstName>
+            <lastName></lastName>
+        </author>
+        <genre>Classic</genre>
+        <publishingYear>-800</publishingYear>
+        <keywords>
+            <keyword>epic</keyword>
+            <keyword>adventure</keyword>
+        </keywords>
+        <description>An ancient Greek epic poem about Odysseus' journey home after the Trojan War.</description>
+        <rating>FIVE_STARS</rating>
+    </book>
+    <book>
+        <id>3</id>
+        <isbn>9780060256654</isbn>
+        <title>Where the Wild Things Are</title>
+        <author>
+            <firstName>Maurice</firstName>
+            <lastName>Sendak</lastName>
+        </author>
+        <genre>Children's</genre>
+        <publishingYear>1963</publishingYear>
+        <keywords>
+            <keyword>children</keyword>
+            <keyword>imagination</keyword>
+        </keywords>
+        <description>A children's picture book about a boy named Max and his adventures with the Wild Things.</description>
+        <rating>FOUR_STARS</rating>
+    </book>
+    <book>
+        <id>4</id>
+        <isbn>9780743273565</isbn>
+        <title>To Kill a Mockingbird</title>
+        <author>
+            <firstName>Harper</firstName>
+            <lastName>Lee</lastName>
+        </author>
+        <genre>Classic</genre>
+        <publishingYear>1960</publishingYear>
+        <keywords>
+            <keyword>racism</keyword>
+            <keyword>southern</keyword>
+        </keywords>
+        <description>A powerful story about racial injustice in the Deep South during the 1930s.</description>
+        <rating>FIVE_STARS</rating>
+    </book>
+    <book>
+        <id>5</id>
+        <isbn>9780590353427</isbn>
+        <title>Harry Potter and the Sorcerer's Stone</title>
+        <author>
+            <firstName>J.K.</firstName>
+            <lastName>Rowling</lastName>
+        </author>
+        <genre>Fantasy</genre>
+        <publishingYear>1997</publishingYear>
+        <keywords>
+            <keyword>magic</keyword>
+            <keyword>wizard</keyword>
+        </keywords>
+        <description>The first book in the Harry Potter series, introducing the magical world of Hogwarts.</description>
+        <rating>FIVE_STARS</rating>
+    </book>
+    <book>
+        <id>6</id>
+        <isbn>9780679783268</isbn>
+        <title>Pride and Prejudice</title>
+        <author>
+            <firstName>Jane</firstName>
+            <lastName>Austen</lastName>
+        </author>
+        <genre>Classic</genre>
+        <publishingYear>1813</publishingYear>
+        <keywords>
+            <keyword>romance</keyword>
+            <keyword>society</keyword>
+        </keywords>
+        <description>A timeless novel exploring love, class, and societal expectations.</description>
+        <rating>FOUR_STARS</rating>
+    </book>
+    <book>
+        <id>7</id>
+        <isbn>9780141439587</isbn>
+        <title>Frankenstein</title>
+        <author>
+            <firstName>Mary</firstName>
+            <lastName>Shelley</lastName>
+        </author>
+        <genre>Classic</genre>
+        <publishingYear>1818</publishingYear>
+        <keywords>
+            <keyword>horror</keyword>
+            <keyword>science fiction</keyword>
+        </keywords>
+        <description>A Gothic tale of a scientist's creation and the consequences of playing God.</description>
+        <rating>FOUR_STARS</rating>
+    </book>
+    <book>
+        <id>8</id>
+        <isbn>9780061120084</isbn>
+        <title>Life of Pi</title>
+        <author>
+            <firstName>Yann</firstName>
+            <lastName>Martel</lastName>
+        </author>
+        <genre>Fiction</genre>
+        <publishingYear>2001</publishingYear>
+        <keywords>
+            <keyword>adventure</keyword>
+            <keyword>survival</keyword>
+        </keywords>
+        <description>A story of a young Indian boy's extraordinary journey at sea with a Bengal tiger.</description>
+        <rating>FIVE_STARS</rating>
+    </book>
+    <book>
+        <id>9</id>
+        <isbn>9780446310789</isbn>
+        <title>To Kill a Mockingbird</title>
+        <author>
+            <firstName>Harper</firstName>
+            <lastName>Lee</lastName>
+        </author>
+        <genre>Classic</genre>
+        <publishingYear>1960</publishingYear>
+        <keywords>
+            <keyword>racism</keyword>
+            <keyword>southern</keyword>
+        </keywords>
+        <description>A powerful story about racial injustice in the Deep South during the 1930s.</description>
+        <rating>FIVE_STARS</rating>
+    </book>
+    <book>
+        <id>10</id>
+        <isbn>9780060256654</isbn>
+        <title>Where the Wild Things Are</title>
+        <author>
+            <firstName>Maurice</firstName>
+            <lastName>Sendak</lastName>
+        </author>
+        <genre>Children's</genre>
+        <publishingYear>1963</publishingYear>
+        <keywords>
+            <keyword>children</keyword>
+            <keyword>imagination</keyword>
+        </keywords>
+        <description>A children's picture book about a boy named Max and his adventures with the Wild Things.</description>
+        <rating>FOUR_STARS</rating>
+    </book>
+    <book>
+        <id>11</id>
+        <isbn>9781400079988</isbn>
+        <title>The Kite Runner</title>
+        <author>
+            <firstName>Khaled</firstName>
+            <lastName>Hosseini</lastName>
+        </author>
+        <genre>Fiction</genre>
+        <publishingYear>2003</publishingYear>
+        <keywords>
+            <keyword>drama</keyword>
+            <keyword>friendship</keyword>
+        </keywords>
+        <description>A gripping tale of redemption set against the backdrop of war-torn Afghanistan.</description>
+        <rating>FOUR_STARS</rating>
+    </book>
+    <book>
+        <id>12</id>
+        <isbn>9780545010221</isbn>
+        <title>The Hunger Games</title>
+        <author>
+            <firstName>Suzanne</firstName>
+            <lastName>Collins</lastName>
+        </author>
+        <genre>Young Adult</genre>
+        <publishingYear>2008</publishingYear>
+        <keywords>
+            <keyword>dystopian</keyword>
+            <keyword>action</keyword>
+        </keywords>
+        <description>A thrilling story of survival and rebellion in a futuristic society.</description>
+        <rating>FIVE_STARS</rating>
+    </book>
+    <book>
+        <id>13</id>
+        <isbn>9780385472579</isbn>
+        <title>Brave New World</title>
+        <author>
+            <firstName>Aldous</firstName>
+            <lastName>Huxley</lastName>
+        </author>
+        <genre>Science Fiction</genre>
+        <publishingYear>1932</publishingYear>
+        <keywords>
+            <keyword>dystopian</keyword>
+            <keyword>social commentary</keyword>
+        </keywords>
+        <description>A thought-provoking novel depicting a futuristic society controlled by technology and conformity.</description>
+        <rating>FOUR_STARS</rating>
+    </book>
+    <book>
+        <id>14</id>
+        <isbn>9780062315007</isbn>
+        <title>The Alchemist</title>
+        <author>
+            <firstName>Paulo</firstName>
+            <lastName>Coelho</lastName>
+        </author>
+        <genre>Fiction</genre>
+        <publishingYear>1988</publishingYear>
+        <keywords>
+            <keyword>philosophical</keyword>
+            <keyword>self-discovery</keyword>
+        </keywords>
+        <description>A mystical and inspiring tale about following one's dreams and finding one's purpose in life.</description>
+        <rating>FIVE_STARS</rating>
+    </book>
+    <book>
+        <id>15</id>
+        <isbn>9780375727342</isbn>
+        <title>The Catcher in the Rye</title>
+        <author>
+            <firstName>J.D.</firstName>
+            <lastName>Salinger</lastName>
+        </author>
+        <genre>Classic</genre>
+        <publishingYear>1951</publishingYear>
+        <keywords>
+            <keyword>coming-of-age</keyword>
+            <keyword>alienation</keyword>
+        </keywords>
+        <description>A classic novel that explores teenage angst and rebellion in post-World War II America.</description>
+        <rating>FOUR_STARS</rating>
+    </book>
+    <book>
+        <id>16</id>
+        <isbn>9781451673319</isbn>
+        <title>The Girl on the Train</title>
+        <author>
+            <firstName>Paula</firstName>
+            <lastName>Hawkins</lastName>
+        </author>
+        <genre>Thriller</genre>
+        <publishingYear>2015</publishingYear>
+        <keywords>
+            <keyword>suspense</keyword>
+            <keyword>mystery</keyword>
+        </keywords>
+        <description>A gripping psychological thriller about a woman who becomes entangled in a missing person's investigation.</description>
+        <rating>THREE_STARS</rating>
+    </book>
+    <book>
+        <id>17</id>
+        <isbn>9780316015844</isbn>
+        <title>Gone Girl</title>
+        <author>
+            <firstName>Gillian</firstName>
+            <lastName>Flynn</lastName>
+        </author>
+        <genre>Thriller</genre>
+        <publishingYear>2012</publishingYear>
+        <keywords>
+            <keyword>crime</keyword>
+            <keyword>twist</keyword>
+        </keywords>
+        <description>A dark and twisted tale of a missing wife and the husband who becomes the prime suspect.</description>
+        <rating>THREE_STARS</rating>
+    </book>
+    <book>
+        <id>18</id>
+        <isbn>9780062225007</isbn>
+        <title>The Fault in Our Stars</title>
+        <author>
+            <firstName>John</firstName>
+            <lastName>Green</lastName>
+        </author>
+        <genre>Young Adult</genre>
+        <publishingYear>2012</publishingYear>
+        <keywords>
+            <keyword>cancer</keyword>
+            <keyword>romance</keyword>
+        </keywords>
+        <description>A heart-wrenching story of two teenagers who meet and fall in love while dealing with their own health challenges.</description>
+        <rating>TWO_STARS</rating>
+    </book>
+    <book>
+        <id>19</id>
+        <isbn>9780812993547</isbn>
+        <title>All the Light We Cannot See</title>
+        <author>
+            <firstName>Anthony</firstName>
+            <lastName>Doerr</lastName>
+        </author>
+        <genre>Historical Fiction</genre>
+        <publishingYear>2014</publishingYear>
+        <keywords>
+            <keyword>WWII</keyword>
+            <keyword>blindness</keyword>
+        </keywords>
+        <description>A beautifully written novel set during World War II, following the lives of a blind French girl and a young German soldier.</description>
+        <rating>THREE_STARS</rating>
+    </book>
+    <book>
+        <id>20</id>
+        <isbn>9780142402511</isbn>
+        <title>Eragon</title>
+        <author>
+            <firstName>Christopher</firstName>
+            <lastName>Paolini</lastName>
+        </author>
+        <genre>Fantasy</genre>
+        <publishingYear>2002</publishingYear>
+        <keywords>
+            <keyword>dragons</keyword>
+            <keyword>adventure</keyword>
+        </keywords>
+        <description>A thrilling fantasy novel about a young farm boy who discovers a dragon egg and embarks on an epic journey.</description>
+        <rating>TWO_STARS</rating>
+    </book>
+    <book>
+        <id>21</id>
+        <isbn>9780062316097</isbn>
+        <title>The Martian</title>
+        <author>
+            <firstName>Andy</firstName>
+            <lastName>Weir</lastName>
+        </author>
+        <genre>Science Fiction</genre>
+        <publishingYear>2011</publishingYear>
+        <keywords>
+            <keyword>space</keyword>
+            <keyword>survival</keyword>
+        </keywords>
+        <description>A gripping tale of an astronaut stranded on Mars and his quest for survival.</description>
+        <rating>FOUR_STARS</rating>
+    </book>
+    <book>
+        <id>22</id>
+        <isbn>9781451648539</isbn>
+        <title>Ready Player One</title>
+        <author>
+            <firstName>Ernest</firstName>
+            <lastName>Cline</lastName>
+        </author>
+        <genre>Science Fiction</genre>
+        <publishingYear>2011</publishingYear>
+        <keywords>
+            <keyword>virtual reality</keyword>
+            <keyword>pop culture</keyword>
+        </keywords>
+        <description>A thrilling adventure set in a dystopian future where people escape reality through a virtual world.</description>
+        <rating>THREE_STARS</rating>
+    </book>
+    <book>
+        <id>23</id>
+        <isbn>9780316015844</isbn>
+        <title>The Help</title>
+        <author>
+            <firstName>Kathryn</firstName>
+            <lastName>Stockett</lastName>
+        </author>
+        <genre>Fiction</genre>
+        <publishingYear>2009</publishingYear>
+        <keywords>
+            <keyword>racism</keyword>
+            <keyword>friendship</keyword>
+        </keywords>
+        <description>A powerful story set in 1960s Mississippi, exploring racial inequality and the lives of African American maids.</description>
+        <rating>FOUR_STARS</rating>
+    </book>
+    <book>
+        <id>24</id>
+        <isbn>9781400033423</isbn>
+        <title>Water for Elephants</title>
+        <author>
+            <firstName>Sara</firstName>
+            <lastName>Gruen</lastName>
+        </author>
+        <genre>Fiction</genre>
+        <publishingYear>2006</publishingYear>
+        <keywords>
+            <keyword>circus</keyword>
+            <keyword>romance</keyword>
+        </keywords>
+        <description>A mesmerizing tale set in the world of a traveling circus during the Great Depression.</description>
+        <rating>THREE_STARS</rating>
+    </book>
+    <book>
+        <id>25</id>
+        <isbn>9780140283331</isbn>
+        <title>The Giver</title>
+        <author>
+            <firstName>Lois</firstName>
+            <lastName>Lowry</lastName>
+        </author>
+        <genre>Young Adult</genre>
+        <publishingYear>1993</publishingYear>
+        <keywords>
+            <keyword>dystopian</keyword>
+            <keyword>memory</keyword>
+        </keywords>
+        <description>A thought-provoking novel about a young boy living in a seemingly utopian society with dark secrets.</description>
+        <rating>FOUR_STARS</rating>
+    </book>
+    <book>
+        <id>26</id>
+        <isbn>9780441172719</isbn>
+        <title>1984</title>
+        <author>
+            <firstName>George</firstName>
+            <lastName>Orwell</lastName>
+        </author>
+        <genre>Science Fiction</genre>
+        <publishingYear>1949</publishingYear>
+        <keywords>
+            <keyword>dystopian</keyword>
+            <keyword>surveillance</keyword>
+        </keywords>
+        <description>A classic novel depicting a totalitarian society where individuality and freedom are brutally suppressed.</description>
+        <rating>FIVE_STARS</rating>
+    </book>
+    <book>
+        <id>27</id>
+        <isbn>9780064404990</isbn>
+        <title>Holes</title>
+        <author>
+            <firstName>Louis</firstName>
+            <lastName>Sachar</lastName>
+        </author>
+        <genre>Young Adult</genre>
+        <publishingYear>1998</publishingYear>
+        <keywords>
+            <keyword>juvenile</keyword>
+            <keyword>adventure</keyword>
+        </keywords>
+        <description>A humorous and poignant story about a boy sent to a brutal juvenile detention camp where he uncovers hidden secrets.</description>
+        <rating>THREE_STARS</rating>
+    </book>
+    <book>
+        <id>28</id>
+        <isbn>9780439023528</isbn>
+        <title>The Hunger Games: Catching Fire</title>
+        <author>
+            <firstName>Suzanne</firstName>
+            <lastName>Collins</lastName>
+        </author>
+        <genre>Young Adult</genre>
+        <publishingYear>2009</publishingYear>
+        <keywords>
+            <keyword>dystopian</keyword>
+            <keyword>action</keyword>
+        </keywords>
+        <description>The thrilling sequel to The Hunger Games, where the protagonist faces new challenges in a fight for survival.</description>
+        <rating>THREE_STARS</rating>
+    </book>
+    <book>
+        <id>29</id>
+        <isbn>9780061124952</isbn>
+        <title>Life of Pi</title>
+        <author>
+            <firstName>Yann</firstName>
+            <lastName>Martel</lastName>
+        </author>
+        <genre>Fiction</genre>
+        <publishingYear>2001</publishingYear>
+        <keywords>
+            <keyword>adventure</keyword>
+            <keyword>spirituality</keyword>
+        </keywords>
+        <description>A remarkable tale of a young Indian boy's journey at sea with a Bengal tiger, testing his faith and survival skills.</description>
+        <rating>FOUR_STARS</rating>
+    </book>
+    <book>
+        <id>30</id>
+        <isbn>9780679783268</isbn>
+        <title>The Picture of Dorian Gray</title>
+        <author>
+            <firstName>Oscar</firstName>
+            <lastName>Wilde</lastName>
+        </author>
+        <genre>Classic</genre>
+        <publishingYear>1890</publishingYear>
+        <keywords>
+            <keyword>gothic</keyword>
+            <keyword>morality</keyword>
+        </keywords>
+        <description>A captivating novel about a man who remains eternally young while a portrait of him reflects the true effects of his debauchery.</description>
+        <rating>THREE_STARS</rating>
+    </book>
+    <book>
+        <id>31</id>
+        <isbn>9780061120084</isbn>
+        <title>The Alchemist</title>
+        <author>
+            <firstName>Paulo</firstName>
+            <lastName>Coelho</lastName>
+        </author>
+        <genre>Fiction</genre>
+        <publishingYear>1988</publishingYear>
+        <keywords>
+            <keyword>adventure</keyword>
+            <keyword>philosophy</keyword>
+        </keywords>
+        <description>A mystical tale of a shepherd boy's journey to discover his personal legend and the meaning of life.</description>
+        <rating>FOUR_STARS</rating>
+    </book>
+    <book>
+        <id>32</id>
+        <isbn>9780671027032</isbn>
+        <title>Angels &amp; Demons</title>
+        <author>
+            <firstName>Dan</firstName>
+            <lastName>Brown</lastName>
+        </author>
+        <genre>Thriller</genre>
+        <publishingYear>2000</publishingYear>
+        <keywords>
+            <keyword>conspiracy</keyword>
+            <keyword>symbolism</keyword>
+        </keywords>
+        <description>A fast-paced thriller featuring Harvard symbologist Robert Langdon as he unravels a sinister plot.</description>
+        <rating>THREE_STARS</rating>
+    </book>
+    <book>
+        <id>33</id>
+        <isbn>9780743273565</isbn>
+        <title>A Thousand Splendid Suns</title>
+        <author>
+            <firstName>Khaled</firstName>
+            <lastName>Hosseini</lastName>
+        </author>
+        <genre>Fiction</genre>
+        <publishingYear>2007</publishingYear>
+        <keywords>
+            <keyword>Afghanistan</keyword>
+            <keyword>family</keyword>
+        </keywords>
+        <description>A gripping novel depicting the lives of two Afghan women as they endure the hardships of war and find strength in their friendship.</description>
+        <rating>THREE_STARS</rating>
+    </book>
+    <book>
+        <id>34</id>
+        <isbn>9780060786502</isbn>
+        <title>The Kite Runner</title>
+        <author>
+            <firstName>Khaled</firstName>
+            <lastName>Hosseini</lastName>
+        </author>
+        <genre>Fiction</genre>
+        <publishingYear>2003</publishingYear>
+        <keywords>
+            <keyword>Afghanistan</keyword>
+            <keyword>redemption</keyword>
+        </keywords>
+        <description>A powerful story of friendship and redemption set against the backdrop of Afghanistan's tumultuous history.</description>
+        <rating>FOUR_STARS</rating>
+    </book>
+    <book>
+        <id>35</id>
+        <isbn>9780143038412</isbn>
+        <title>To Kill a Mockingbird</title>
+        <author>
+            <firstName>Harper</firstName>
+            <lastName>Lee</lastName>
+        </author>
+        <genre>Classic</genre>
+        <publishingYear>1960</publishingYear>
+        <keywords>
+            <keyword>racism</keyword>
+            <keyword>coming-of-age</keyword>
+        </keywords>
+        <description>A timeless and powerful novel that explores racial injustice through the eyes of a young girl in the Deep South.</description>
+        <rating>FOUR_STARS</rating>
+    </book>
+    <book>
+        <id>36</id>
+        <isbn>9780142437230</isbn>
+        <title>Moby-Dick</title>
+        <author>
+            <firstName>Herman</firstName>
+            <lastName>Melville</lastName>
+        </author>
+        <genre>Classic</genre>
+        <publishingYear>1851</publishingYear>
+        <keywords>
+            <keyword>adventure</keyword>
+            <keyword>whaling</keyword>
+        </keywords>
+        <description>An epic tale of obsession and revenge, set aboard a whaling ship as the captain pursues the legendary white whale.</description>
+        <rating>THREE_STARS</rating>
+    </book>
+    <book>
+        <id>37</id>
+        <isbn>9780446310789</isbn>
+        <title>To Kill a Mockingbird</title>
+        <author>
+            <firstName>John</firstName>
+            <lastName>Steinbeck</lastName>
+        </author>
+        <genre>Fiction</genre>
+        <publishingYear>1939</publishingYear>
+        <keywords>
+            <keyword>Great Depression</keyword>
+            <keyword>social commentary</keyword>
+        </keywords>
+        <description>A powerful novel that follows the Joad family's journey as they seek a better life during the Great Depression.</description>
+        <rating>FOUR_STARS</rating>
+    </book>
+    <book>
+        <id>38</id>
+        <isbn>9780062315007</isbn>
+        <title>The Fault in Our Stars</title>
+        <author>
+            <firstName>John</firstName>
+            <lastName>Green</lastName>
+        </author>
+        <genre>Young Adult</genre>
+        <publishingYear>2012</publishingYear>
+        <keywords>
+            <keyword>cancer</keyword>
+            <keyword>romance</keyword>
+        </keywords>
+        <description>A heartwrenching story of two teenagers who meet and fall in love at a cancer support group.</description>
+        <rating>THREE_STARS</rating>
+    </book>
+    <book>
+        <id>39</id>
+        <isbn>9780545010221</isbn>
+        <title>Harry Potter and the Chamber of Secrets</title>
+        <author>
+            <firstName>J.K.</firstName>
+            <lastName>Rowling</lastName>
+        </author>
+        <genre>Fantasy</genre>
+        <publishingYear>1998</publishingYear>
+        <keywords>
+            <keyword>wizardry</keyword>
+            <keyword>adventure</keyword>
+        </keywords>
+        <description>The second installment in the magical Harry Potter series, following the young wizard's second year at Hogwarts School of Witchcraft and Wizardry.</description>
+        <rating>THREE_STARS</rating>
+    </book>
+    <book>
+        <id>40</id>
+        <isbn>9780060256654</isbn>
+        <title>Where the Wild Things Are</title>
+        <author>
+            <firstName>Maurice</firstName>
+            <lastName>Sendak</lastName>
+        </author>
+        <genre>Children's</genre>
+        <publishingYear>1963</publishingYear>
+        <keywords>
+            <keyword>imagination</keyword>
+            <keyword>monsters</keyword>
+        </keywords>
+        <description>A beloved children's picture book that takes readers on a wild adventure through the imaginative world of a young boy.</description>
+        <rating>FOUR_STARS</rating>
+    </book>
+    <book>
+        <id>41</id>
+        <isbn>9780061120091</isbn>
+        <title>The Catcher in the Rye</title>
+        <author>
+            <firstName>J.D.</firstName>
+            <lastName>Salinger</lastName>
+        </author>
+        <genre>Classic</genre>
+        <publishingYear>1951</publishingYear>
+        <keywords>
+            <keyword>coming-of-age</keyword>
+            <keyword>alienation</keyword>
+        </keywords>
+        <description>A timeless coming-of-age novel that follows the rebellious teenager Holden Caulfield as he navigates the complexities of adulthood.</description>
+        <rating>TWO_STARS</rating>
+    </book>
+    <book>
+        <id>42</id>
+        <isbn>9780141182809</isbn>
+        <title>One Hundred Years of Solitude</title>
+        <author>
+            <firstName>Gabriel</firstName>
+            <lastName>García Márquez</lastName>
+        </author>
+        <genre>Magical Realism</genre>
+        <publishingYear>1967</publishingYear>
+        <keywords>
+            <keyword>family</keyword>
+            <keyword>mythical</keyword>
+        </keywords>
+        <description>A captivating saga that spans generations, portraying the Buendía family's triumphs and tragedies in the fictional town of Macondo.</description>
+        <rating>THREE_STARS</rating>
+    </book>
+    <book>
+        <id>43</id>
+        <isbn>9780062316097</isbn>
+        <title>The Girl on the Train</title>
+        <author>
+            <firstName>Paula</firstName>
+            <lastName>Hawkins</lastName>
+        </author>
+        <genre>Thriller</genre>
+        <publishingYear>2015</publishingYear>
+        <keywords>
+            <keyword>suspense</keyword>
+            <keyword>psychological</keyword>
+        </keywords>
+        <description>A gripping psychological thriller that follows the troubled protagonist as she becomes entangled in a missing person investigation.</description>
+        <rating>TWO_STARS</rating>
+    </book>
+    <book>
+        <id>44</id>
+        <isbn>9780525478812</isbn>
+        <title>The Giver</title>
+        <author>
+            <firstName>Lois</firstName>
+            <lastName>Lowry</lastName>
+        </author>
+        <genre>Young Adult</genre>
+        <publishingYear>1993</publishingYear>
+        <keywords>
+            <keyword>dystopian</keyword>
+            <keyword>utopia</keyword>
+        </keywords>
+        <description>A thought-provoking novel set in a seemingly perfect society, where the protagonist discovers the dark truths beneath the surface.</description>
+        <rating>TWO_STARS</rating>
+    </book>
+    <book>
+        <id>45</id>
+        <isbn>9780142414934</isbn>
+        <title>Ender's Game</title>
+        <author>
+            <firstName>Orson Scott</firstName>
+            <lastName>Card</lastName>
+        </author>
+        <genre>Science Fiction</genre>
+        <publishingYear>1985</publishingYear>
+        <keywords>
+            <keyword>alien invasion</keyword>
+            <keyword>military</keyword>
+        </keywords>
+        <description>A thrilling science fiction novel that follows the young genius Ender Wiggin as he prepares to defend Earth against an alien threat.</description>
+        <rating>TWO_STARS</rating>
+    </book>
+    <book>
+        <id>46</id>
+        <isbn>9780143108275</isbn>
+        <title>The Road</title>
+        <author>
+            <firstName>Cormac</firstName>
+            <lastName>McCarthy</lastName>
+        </author>
+        <genre>Dystopian</genre>
+        <publishingYear>2006</publishingYear>
+        <keywords>
+            <keyword>post-apocalyptic</keyword>
+            <keyword>survival</keyword>
+        </keywords>
+        <description>A hauntingly beautiful novel that follows a father and son's journey across a desolate landscape in a world ravaged by an unspecified cataclysm.</description>
+        <rating>THREE_STARS</rating>
+    </book>
+    <book>
+        <id>47</id>
+        <isbn>9780743273565</isbn>
+        <title>A Thousand Splendid Suns</title>
+        <author>
+            <firstName>Khaled</firstName>
+            <lastName>Hosseini</lastName>
+        </author>
+        <genre>Fiction</genre>
+        <publishingYear>2007</publishingYear>
+        <keywords>
+            <keyword>Afghanistan</keyword>
+            <keyword>family</keyword>
+        </keywords>
+        <description>A gripping novel depicting the lives of two Afghan women as they endure the hardships of war and find strength in their friendship.</description>
+        <rating>TWO_STARS</rating>
+    </book>
+    <book>
+        <id>48</id>
+        <isbn>9780061120084</isbn>
+        <title>The Alchemist</title>
+        <author>
+            <firstName>Paulo</firstName>
+            <lastName>Coelho</lastName>
+        </author>
+        <genre>Fiction</genre>
+        <publishingYear>1988</publishingYear>
+        <keywords>
+            <keyword>adventure</keyword>
+            <keyword>philosophy</keyword>
+        </keywords>
+        <description>A mystical tale of a shepherd boy's journey to discover his personal legend and the meaning of life.</description>
+        <rating>TWO_STARS</rating>
+    </book>
+    <book>
+        <id>49</id>
+        <isbn>9780446310789</isbn>
+        <title>To Kill a Mockingbird</title>
+        <author>
+            <firstName>Harper</firstName>
+            <lastName>Lee</lastName>
+        </author>
+        <genre>Classic</genre>
+        <publishingYear>1960</publishingYear>
+        <keywords>
+            <keyword>racism</keyword>
+            <keyword>coming-of-age</keyword>
+        </keywords>
+        <description>A timeless and powerful novel that explores racial injustice through the eyes of a young girl in the Deep South.</description>
+        <rating>ONE_STAR</rating>
+    </book>
+    <book>
+        <id>50</id>
+        <isbn>9780743273565</isbn>
+        <title>A Thousand Splendid Suns</title>
+        <author>
+            <firstName>Khaled</firstName>
+            <lastName>Hosseini</lastName>
+        </author>
+        <genre>Fiction</genre>
+        <publishingYear>2007</publishingYear>
+        <keywords>
+            <keyword>Afghanistan</keyword>
+            <keyword>family</keyword>
+        </keywords>
+        <description>A gripping novel depicting the lives of two Afghan women as they endure the hardships of war and find strength in their friendship.</description>
+        <rating>ONE_STAR</rating>
+    </book>
+    <book>
+        <id>51</id>
+        <isbn>9780743273565</isbn>
+        <title>A Thousand Splendid Suns</title>
+        <author>
+            <firstName>Khaled</firstName>
+            <lastName>Hosseini</lastName>
+        </author>
+        <genre>Fiction</genre>
+        <publishingYear>2007</publishingYear>
+        <keywords>
+            <keyword>Afghanistan</keyword>
+            <keyword>family</keyword>
+        </keywords>
+        <description>A gripping novel depicting the lives of two Afghan women as they endure the hardships of war and find strength in their friendship.</description>
+        <rating>ONE_STAR</rating>
+    </book>
+</library>

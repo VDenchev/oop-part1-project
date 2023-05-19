@@ -7,6 +7,9 @@ import models.wrappers.LibraryFile;
 import java.util.List;
 
 public class WrongCommand implements GuestCommand {
+    public static final String INCORRECT_USAGE = "Incorrect usage! Try typi— No! Try not. Do. Or do not. There is no try.";
+    public static final int CORRECT_ARGS_COUNT = 0;
+
     private String message;
 
     public WrongCommand(String message) {
@@ -21,13 +24,13 @@ public class WrongCommand implements GuestCommand {
     @Override
     public String accept(User user, List<String> args, LibraryFile libraryFile) {
         if (!isValidArgsCount(args.size())) {
-            return "Incorrect usage! Try typi— No! Try not. Do. Or do not. There is no try.";
+            return INCORRECT_USAGE;
         }
         return user.visit(this, args, libraryFile);
     }
 
     @Override
     public boolean isValidArgsCount(int argsCount) {
-        return argsCount >= 0;
+        return argsCount >= CORRECT_ARGS_COUNT;
     }
 }

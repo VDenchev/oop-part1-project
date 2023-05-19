@@ -18,7 +18,6 @@ public class Login implements GuestCommand {
     public static final int CORRECT_ARGS_COUNT = 1;
 
     private Scanner scanner;
-
     private CurrentUser currentUser;
     private AccountService accountService;
 

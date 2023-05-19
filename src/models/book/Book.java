@@ -75,6 +75,7 @@ public class Book {
 
         public Book build() {
             //TODO: add validation
+             if (id < 0) throw new IllegalArgumentException("Book ID cannot be a negative number!");
 
             return new Book(this);
         }
@@ -83,15 +84,15 @@ public class Book {
     @Override
     public String toString() {
         return "========== BOOK INFORMATION ==========\n" +
-                "id: " + id + "\n" +
-                "title: " + title + "\n" +
-                "author: " + author + "\n" +
-                "description: " + description + "\n" +
-                "isbn: " + isbn + "\n" +
-                "genre: " + genre + "\n" +
-                "keywords: " + String.join(", ", keywords) + "\n" +
-                "year published: " + publishingYear + "\n" +
-                "rating: " + rating + "\n" +
+                "id:               " + id + "\n" +
+                "title:            " + title + "\n" +
+                "author:           " + author + "\n" +
+                "description:      " + description + "\n" +
+                "isbn:             " + isbn + "\n" +
+                "genre:            " + genre + "\n" +
+                "keywords:         " + String.join(", ", keywords) + "\n" +
+                "year published:   " + publishingYear + "\n" +
+                "rating:           " + rating + "\n" +
                 "======================================";
     }
 
@@ -154,39 +155,39 @@ public class Book {
         return rating;
     }
 
-    public void setId(int id) {
+    private void setId(int id) {
         this.id = id;
     }
 
-    public void setIsbn(String isbn) {
+    private  void setIsbn(String isbn) {
         this.isbn = isbn;
     }
 
-    public void setTitle(String title) {
+    private void setTitle(String title) {
         this.title = title;
     }
 
-    public void setAuthor(Author author) {
+    private void setAuthor(Author author) {
         this.author = author;
     }
 
-    public void setGenre(String genre) {
+    private void setGenre(String genre) {
         this.genre = genre;
     }
 
-    public void setPublishingYear(int publishingYear) {
+    private void setPublishingYear(int publishingYear) {
         this.publishingYear = publishingYear;
     }
 
-    public void setKeywords(String[] keywords) {
+    private void setKeywords(String[] keywords) {
         this.keywords = keywords;
     }
 
-    public void setDescription(String description) {
+    private void setDescription(String description) {
         this.description = description;
     }
 
-    public void setRating(Rating rating) {
+    private void setRating(Rating rating) {
         this.rating = rating;
     }
 }

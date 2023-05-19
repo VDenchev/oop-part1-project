@@ -49,11 +49,11 @@ public class Author {
         return firstName + (lastName.isBlank() ? "" : " " + lastName);
     }
 
-    protected void setFirstName(String firstName) {
+    private void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
-    protected void setLastName(String lastName) {
+    private void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
@@ -61,6 +61,4 @@ public class Author {
     public String toString() {
        return getFullName();
     }
-
-
 }

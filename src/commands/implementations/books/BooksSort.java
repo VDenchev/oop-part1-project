@@ -11,6 +11,7 @@ import utils.InsertionSort;
 import java.util.Comparator;
 import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class BooksSort implements ClientCommand {
@@ -46,7 +47,10 @@ public class BooksSort implements ClientCommand {
             comparator = new ReverseComparator(comparator);
         }
 
-        library.setBooks(InsertionSort.sort(library.getBooks().stream(), comparator).collect(Collectors.toCollection(LinkedHashSet::new)));
+        Set<Book> sortedBooks = InsertionSort.sort(library.getBooks().stream(), comparator)
+                .collect(Collectors.toCollection(LinkedHashSet::new));
+        library.setBooks(sortedBooks);
+
         return SUCCESS_MESSAGE;
     }
 

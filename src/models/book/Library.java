@@ -69,7 +69,7 @@ public class Library {
         Set<Book> matchingBooks = new LinkedHashSet<>();
 
         for (Book book : books) {
-            if (book.getTitle().toUpperCase().contains(fullName.toUpperCase())) {
+            if (book.getAuthor().getFullName().toUpperCase().contains(fullName.toUpperCase())) {
                 matchingBooks.add(book);
             }
         }

@@ -33,8 +33,8 @@ public class Open implements GuestCommand {
         String fileName = args.get(1);
 
         try {
-            libraryFile.setFile(fileName);
-            File file = new File(libraryFile.getFile());
+            libraryFile.setFileName(fileName);
+            File file = new File(libraryFile.getFileName());
 
             if (!file.exists()) {
                 file.createNewFile();

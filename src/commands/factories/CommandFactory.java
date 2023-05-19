@@ -5,6 +5,7 @@ import commands.implementations.WrongCommand;
 import commands.implementations.authentication.*;
 import commands.implementations.books.Books;
 import commands.implementations.file.*;
+import commands.implementations.help.Help;
 import commands.implementations.users.Users;
 import commands.services.AccountService;
 import models.book.Library;
@@ -19,11 +20,12 @@ public class CommandFactory {
     public static final String INCORRECT_COMMAND = "Incorrect command %s! Type \"help\" for a list with available commands";
 
     public Command createCommand(String commandAsText, LibraryFile libraryFile, Library library, IParser parser, Scanner scanner, CurrentUser currentUser, AccountService accountService) {
-        return switch (commandAsText.toUpperCase()){
+        return switch (commandAsText.toUpperCase()) {
             case "OPEN" -> new Open(libraryFile, library, parser);
             case "SAVE" -> new Save(libraryFile, library, parser);
             case "SAVEAS" -> new SaveAs(library, parser);
             case "CLOSE" -> new Close(libraryFile, library);
+            case "HELP" -> new Help();
             case "LOGIN" -> new Login(scanner, currentUser, accountService);
             case "LOGOUT" -> new Logout(currentUser);
             case "BOOKS" -> new Books(scanner, currentUser, libraryFile, library);

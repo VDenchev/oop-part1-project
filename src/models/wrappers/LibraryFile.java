@@ -1,12 +1,12 @@
 package models.wrappers;
 
 public class LibraryFile {
-    private String file;
+    private String fileName;
     private String extension;
 
-    public LibraryFile(String file, String extension) {
+    public LibraryFile(String fileName, String extension) {
         this.extension = extension;
-        setFile(file);
+        setFileName(fileName);
     }
 
     public LibraryFile(String extension) {
@@ -23,23 +23,23 @@ public class LibraryFile {
         return targetExtension.equals(extension);
     }
 
-    public void setFile(String file) {
-        if (!fileExtensionMatches(file)) {
+    public void setFileName(String fileName) {
+        if (!fileExtensionMatches(fileName)) {
             throw new IllegalArgumentException("The system only supports files with \"." + extension + "\" extension!");
         }
-        this.file = file;
+        this.fileName = fileName;
     }
 
     public void clearFile() {
-        file = null;
+        fileName = null;
     }
 
     public boolean isFileOpened() {
-        return file != null;
+        return fileName != null;
     }
 
-    public String getFile() {
-        return file;
+    public String getFileName() {
+        return fileName;
     }
 
     public String getExtension() {

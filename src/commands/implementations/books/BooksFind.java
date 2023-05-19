@@ -12,6 +12,7 @@ import java.util.List;
 public class BooksFind implements ClientCommand {
     public static final String INCORRECT_USAGE = "Incorrect usage. Try typing: books find <option> <option_string>, where <option> is one of the following: title, author, tag ";
     public static final int CORRECT_ARGS_COUNT = 4;
+    public static final String LINE = "____________________________________________________";
 
     private Library library;
 
@@ -35,21 +36,21 @@ public class BooksFind implements ClientCommand {
             return INCORRECT_USAGE;
         }
 
-        StringBuilder sb = new StringBuilder(String.format("%d BOOKS FOUND%n", booksFound.size()));
+        StringBuilder sb = new StringBuilder(LINE).append("\n");
 
-        for (Book book: booksFound) {
+        for (Book book : booksFound) {
             sb.append(book).append("\n");
         }
 
-        return sb.toString();
+        return sb.append(String.format("%d BOOKS FOUND%n", booksFound.size())).append(LINE).toString();
     }
 
     @Override
     public String accept(User user, List<String> args, LibraryFile libraryFile) {
-        List<String> parsedArgs = parseArguments(args);
-        if (!isValidArgsCount(parsedArgs.size())) {
+        if (!isValidArgsCount(args.size())) {
             return INCORRECT_USAGE;
         }
+        List<String> parsedArgs = parseArguments(args);
         return user.visit(this, parsedArgs, libraryFile);
     }
 

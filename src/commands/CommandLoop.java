@@ -33,8 +33,13 @@ public class CommandLoop {
     }
 
     public void start() {
+        char[] arr = new char[49];
+        Arrays.fill(arr, '=');
+        String border = new String(arr);
+        System.out.println(String.format("%s%n%37s%n%s", border, "Library Management System", border));
+
         while (true) {
-            System.out.print("Enter command:");
+            System.out.print("Enter command: ");
             String userInput = scanner.nextLine().trim();
             List<String> arguments = new ArrayList<>(Arrays.asList(userInput.split("\\s+")));
 

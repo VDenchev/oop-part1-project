@@ -34,7 +34,7 @@ public class Books implements GuestCommand {
         String subcommandAsText = args.get(1);
 
         Command command = switch (subcommandAsText.toUpperCase()) {
-            case "ALL" -> new BooksAll(library);
+            case "ALL" -> new BooksAll(library, scanner);
             case "INFO" -> new BooksInfo(library);
             case "FIND" -> new BooksFind(library);
             case "SORT" -> new BooksSort(library);

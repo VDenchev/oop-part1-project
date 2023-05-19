@@ -28,8 +28,8 @@ public class Save implements GuestCommand {
 
     @Override
     public String execute(List<String> args) {
-        File file = new File(libraryFile.getFile());
-        String fileName = libraryFile.getFile();
+        File file = new File(libraryFile.getFileName());
+        String fileName = libraryFile.getFileName();
 
         try {
             marshaller.marshal(library, file);
@@ -38,6 +38,7 @@ public class Save implements GuestCommand {
         }
         return String.format(SUCCESS_MESSAGE, fileName);
     }
+
     @Override
     public String accept(User user, List<String> args, LibraryFile libraryFile) {
         if(!isValidArgsCount(args.size())) {

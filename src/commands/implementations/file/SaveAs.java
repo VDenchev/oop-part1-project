@@ -30,12 +30,13 @@ public class SaveAs implements GuestCommand {
 
         try {
             LibraryFile libraryFile = new LibraryFile(fileName, "xml");
-            marshaller.marshal(library, new File(libraryFile.getFile()));
+            marshaller.marshal(library, new File(libraryFile.getFileName()));
         } catch (ParserException e) {
             return ERROR_SAVING_TO_FILE;
         }
         return String.format(SUCCESS_MESSAGE, fileName);
     }
+
     @Override
     public String accept(User user, List<String> args, LibraryFile libraryFile) {
         if(!isValidArgsCount(args.size())) {

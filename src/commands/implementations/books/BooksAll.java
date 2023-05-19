@@ -1,7 +1,6 @@
 package commands.implementations.books;
 
 import commands.contracts.ClientCommand;
-import models.book.Book;
 import models.book.Library;
 import models.roles.contracts.User;
 import models.wrappers.LibraryFile;
@@ -9,69 +8,42 @@ import models.wrappers.LibraryFile;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 
 public class BooksAll implements ClientCommand {
-    public static final int CORRECT_ARGS_COUNT = 2;
     public static final String INCORRECT_USAGE = "Incorrect usage! Try typing: books all";
+    public static final int CORRECT_ARGS_COUNT = 2;
 
     private Library library;
-
-    public BooksAll(Library library) {
+    private Scanner scanner;
+    public BooksAll(Library library, Scanner scanner) {
         this.library = library;
+        this.scanner = scanner;
     }
 
     @Override
     public String execute(List<String> args) {
         List<String> tableHeaders = new ArrayList<>(Arrays.asList("Title", "Author", "Genre", "ISBN"));
-        List<Integer> columnWidths = calculateColumnWidths(tableHeaders, library, 2);
+        BooksTableFormatter booksTableFormatter = new BooksTableFormatter(tableHeaders, library.getBooks().stream().toList(), 10);
 
-        String rowFormat = columnWidths.stream()
-                .reduce(new StringBuilder(),
-                        (sb, el) -> sb.append("| %-").append(el - 1).append("s"),
-                        StringBuilder::append)
-                .append("|%n").toString();
+        int page = 1;
+        char input;
 
-        String border = columnWidths.stream()
-                .reduce(new StringBuilder(),
-                        (sb, el) -> sb.append("+").append(fillString(el, '-')),
-                        StringBuilder::append)
-                .append("+\n")
-                .toString();
+        do {
+            System.out.println(booksTableFormatter.getPage(page));
+            System.out.print("Type: p - previous page, n - next page, enter - exit ");
 
-        String headers =  String.format(rowFormat, tableHeaders.toArray());
-        StringBuilder sb = new StringBuilder(border).append(headers).append(border);
-        library.getBooks()
-                .forEach(book -> sb.append(String.format(rowFormat, book.getTitle(), book.getAuthor(), book.getGenre(), book.getIsbn())));
-        sb.append(border);
+            String line = scanner.nextLine();
+            input = line.isBlank() ? Character.MIN_VALUE : line.charAt(0);
 
-        return sb.toString();
-    }
-
-    private List<Integer> calculateColumnWidths(List<String> headers, Library library, int padding) {
-        List<Integer> columnWidths = new ArrayList<>();
-        for (String header : headers) {
-            int maxWidth = header.length();
-            for (Book book : library.getBooks()) {
-                int width = switch (header) {
-                    case "Title" -> book.getTitle().length();
-                    case "Author" -> book.getAuthor().getFullName().length();
-                    case "Genre" -> book.getGenre().length();
-                    case "ISBN" -> book.getIsbn().length();
-                    default -> 0;
-                };
-                maxWidth = Math.max(maxWidth, width);
+            if (page > 1 && input == 'p') {
+                page--;
             }
-            columnWidths.add(maxWidth + padding);
-        }
-        return columnWidths;
-    }
-
-    private String fillString(int length, char character) {
-        StringBuilder sb = new StringBuilder(length);
-        for (int i = 0; i < length; i++) {
-            sb.append(character);
-        }
-        return sb.toString();
+            if (page < booksTableFormatter.getPagesCount() && input == 'n') {
+                page++;
+            }
+        } while (input != Character.MIN_VALUE);
+        return "";
     }
 
     @Override

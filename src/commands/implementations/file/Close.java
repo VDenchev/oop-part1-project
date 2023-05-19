@@ -21,7 +21,7 @@ public class Close implements GuestCommand {
 
     @Override
     public String execute(List<String> args) {
-        String closedFile = libraryFile.getFile();
+        String closedFile = libraryFile.getFileName();
         libraryFile.clearFile();
         library.clear();
         return String.format(SUCCESS_MESSAGE, closedFile);
