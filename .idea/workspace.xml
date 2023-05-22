@@ -10,27 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd6be47a-342f-4cde-8c77-7b415d825824" name="Changes" comment="Add log in functionality, accounts and skeleton for adding more commands">
-      <change afterPath="$PROJECT_DIR$/src/commands/implementations/books/BooksTableFormatter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commands/implementations/help/Help.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/CommandLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/CommandLoop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/factories/CommandFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/factories/CommandFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/implementations/WrongCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/implementations/WrongCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/implementations/authentication/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/implementations/authentication/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/implementations/books/Books.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/implementations/books/Books.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/implementations/books/BooksAll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/implementations/books/BooksAll.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/implementations/books/BooksFind.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/implementations/books/BooksFind.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/implementations/books/BooksSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/implementations/books/BooksSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/implementations/file/Close.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/implementations/file/Close.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/implementations/file/Open.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/implementations/file/Open.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/implementations/file/Save.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/implementations/file/Save.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/implementations/file/SaveAs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/implementations/file/SaveAs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/book/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/book/Author.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/book/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/book/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/book/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/book/Library.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/parser/exceptions/ParserException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/parser/exceptions/ParserException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/wrappers/LibraryFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/wrappers/LibraryFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/InsertionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/InsertionSort.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +149,7 @@
       <workItem from="1686138661091" duration="7253000" />
       <workItem from="1686155132802" duration="4324000" />
       <workItem from="1686243480173" duration="108000" />
-      <workItem from="1686313856022" duration="5830000" />
+      <workItem from="1686313856022" duration="7479000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1679514872614</created>

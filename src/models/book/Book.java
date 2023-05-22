@@ -28,7 +28,7 @@ public class Book {
         this.rating = builder.rating;
     }
 
-    protected Book() {}
+    private Book() {}
 
     public static class Builder {
         private int id ;

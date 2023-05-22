@@ -14,7 +14,7 @@ public class Author {
         this.lastName = builder.lastName;
     }
 
-    protected Author(){}
+    private Author(){}
 
     public static class Builder {
         private String firstName;
