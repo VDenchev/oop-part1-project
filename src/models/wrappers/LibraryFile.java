@@ -1,12 +1,16 @@
 package models.wrappers;
 
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintWriter;
+
 public class LibraryFile {
-    private String fileName;
+    private File file;
     private String extension;
 
-    public LibraryFile(String fileName, String extension) {
+    public LibraryFile(String fileName, String extension) throws IOException{
         this.extension = extension;
-        setFileName(fileName);
+        setFile(fileName);
     }
 
     public LibraryFile(String extension) {
@@ -23,23 +27,39 @@ public class LibraryFile {
         return targetExtension.equals(extension);
     }
 
-    public void setFileName(String fileName) {
+    public void setFile(String fileName) throws IOException {
         if (!fileExtensionMatches(fileName)) {
             throw new IllegalArgumentException("The system only supports files with \"." + extension + "\" extension!");
         }
-        this.fileName = fileName;
+        this.file = new File(fileName);
+
+        File parentDir = file.getParentFile();
+        if (parentDir != null) {
+            parentDir.mkdirs();
+        }
+
+        if (!file.exists()) {
+            file.createNewFile();
+            PrintWriter pw = new PrintWriter(file);
+            pw.write("<library/>");
+            pw.close();
+        }
     }
 
     public void clearFile() {
-        fileName = null;
+        file = null;
     }
 
     public boolean isFileOpened() {
-        return fileName != null;
+        return file != null;
+    }
+
+    public File getFile() {
+        return file;
     }
 
     public String getFileName() {
-        return fileName;
+        return file.getPath();
     }
 
     public String getExtension() {

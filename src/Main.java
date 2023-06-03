@@ -8,10 +8,11 @@ import models.parser.contracts.IParser;
 import models.wrappers.LibraryFile;
 import models.wrappers.CurrentUser;
 
+import java.io.File;
 import java.util.Scanner;
 
 public class Main {
-    public static final String FILE_PATH = "files\\accounts.txt";
+    public static final String FILE_PATH = "files" + File.separator + "accounts.txt";
     public static final String SEPARATOR = ":";
 
     public static void main(String[] args) {
@@ -20,7 +21,7 @@ public class Main {
         LibraryFile libraryFile = new LibraryFile("xml");
         Scanner scanner = new Scanner(System.in);
         IParser parser = new XmlParser();
-        AccountService accountService = new AccountService(new AccountDAOImpl(FILE_PATH, SEPARATOR));
+        AccountService accountService = new AccountService(new AccountDAOImpl(new File(FILE_PATH), SEPARATOR));
         CommandFactory commandFactory = new CommandFactory();
 
         CommandLoop commandLoop = new CommandLoop(library, user, libraryFile, parser, accountService, commandFactory, scanner);

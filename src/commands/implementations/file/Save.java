@@ -28,11 +28,10 @@ public class Save implements GuestCommand {
 
     @Override
     public String execute(List<String> args) {
-        File file = new File(libraryFile.getFileName());
         String fileName = libraryFile.getFileName();
 
         try {
-            marshaller.marshal(library, file);
+            marshaller.marshal(library, libraryFile.getFile());
         } catch (ParserException e) {
             return String.format(ERROR_SAVING_TO_FILE, fileName);
         }
@@ -41,7 +40,7 @@ public class Save implements GuestCommand {
 
     @Override
     public String accept(User user, List<String> args, LibraryFile libraryFile) {
-        if(!isValidArgsCount(args.size())) {
+        if (!isValidArgsCount(args.size())) {
             return INCORRECT_USAGE;
         }
         return user.visit(this, args, libraryFile);

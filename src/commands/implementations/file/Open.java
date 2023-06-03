@@ -7,7 +7,6 @@ import models.parser.exceptions.ParserException;
 import models.roles.contracts.User;
 import models.wrappers.LibraryFile;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
@@ -33,15 +32,9 @@ public class Open implements GuestCommand {
         String fileName = args.get(1);
 
         try {
-            libraryFile.setFileName(fileName);
-            File file = new File(libraryFile.getFileName());
-
-            if (!file.exists()) {
-                file.createNewFile();
-            } else {
-                Library unmarshalledLibrary = unmarshaller.unmarshal(Library.class, file);
-                library.setBooks(unmarshalledLibrary.getBooks());
-            }
+            libraryFile.setFile(fileName);
+            Library unmarshalledLibrary = unmarshaller.unmarshal(Library.class, libraryFile.getFile());
+            library.setBooks(unmarshalledLibrary.getBooks());
         } catch (IOException e) {
             return String.format(ERROR_OPENING_FILE, fileName);
         } catch (ParserException e) {
@@ -50,9 +43,10 @@ public class Open implements GuestCommand {
 
         return String.format(SUCCESS_MESSAGE, fileName);
     }
+
     @Override
     public String accept(User user, List<String> args, LibraryFile libraryFile) {
-        if(!isValidArgsCount(args.size())) {
+        if (!isValidArgsCount(args.size())) {
             return INCORRECT_USAGE;
         }
         return user.visit(this, args, libraryFile);

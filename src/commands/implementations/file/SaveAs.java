@@ -8,6 +8,7 @@ import models.roles.contracts.User;
 import models.wrappers.LibraryFile;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.List;
 
 public class SaveAs implements GuestCommand {
@@ -30,16 +31,16 @@ public class SaveAs implements GuestCommand {
 
         try {
             LibraryFile libraryFile = new LibraryFile(fileName, "xml");
-            marshaller.marshal(library, new File(libraryFile.getFileName()));
-        } catch (ParserException e) {
-            return ERROR_SAVING_TO_FILE;
+            marshaller.marshal(library, libraryFile.getFile());
+        } catch (Exception e) {
+            return String.format(ERROR_SAVING_TO_FILE, fileName);
         }
         return String.format(SUCCESS_MESSAGE, fileName);
     }
 
     @Override
     public String accept(User user, List<String> args, LibraryFile libraryFile) {
-        if(!isValidArgsCount(args.size())) {
+        if (!isValidArgsCount(args.size())) {
             return INCORRECT_USAGE;
         }
         return user.visit(this, args, libraryFile);

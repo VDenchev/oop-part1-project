@@ -13,17 +13,17 @@ import java.util.List;
 import java.util.Scanner;
 
 public class AccountDAOImpl implements AccountDAO {
-    private String path;
+    private File file;
     private String separator;
 
-    public AccountDAOImpl(String path, String separator) {
-        this.path = path;
+    public AccountDAOImpl(File file, String separator) {
+        this.file = file;
         this.separator = separator;
     }
 
     @Override
     public List<Account> getAll() throws IOException {
-        Scanner scanner = new Scanner(new File(path));
+        Scanner scanner = new Scanner(file);
         List<Account> accounts = new ArrayList<>();
 
         while (scanner.hasNext()) {
@@ -53,7 +53,7 @@ public class AccountDAOImpl implements AccountDAO {
     @Override
     public Account get(String username, String password) throws IOException {
         List<Account> accounts = getAll();
-        for (Account account: accounts) {
+        for (Account account : accounts) {
             boolean usernameMatches = account.getUsername().equalsIgnoreCase(username);
             boolean passwordMatches = account.getPassword().equals(password);
 
@@ -66,7 +66,7 @@ public class AccountDAOImpl implements AccountDAO {
 
     @Override
     public void add(Account account) throws IOException {
-        PrintWriter printWriter = new PrintWriter(new FileWriter(path, true));
+        PrintWriter printWriter = new PrintWriter(new FileWriter(file, true));
         printWriter.println(account.getUsername() + separator + account.getPassword() + separator + account.getPermissionLevel());
 
         printWriter.close();
@@ -80,12 +80,12 @@ public class AccountDAOImpl implements AccountDAO {
         while (itr.hasNext()) {
             boolean usernameMatches = itr.next().getUsername().equalsIgnoreCase(username);
 
-            if (usernameMatches){
+            if (usernameMatches) {
                 itr.remove();
             }
         }
 
-        PrintWriter printWriter = new PrintWriter(new FileWriter(path));
+        PrintWriter printWriter = new PrintWriter(file);
         for (Account account : accounts) {
             printWriter.println(account);
         }
