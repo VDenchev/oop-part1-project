@@ -28,7 +28,7 @@ public class BooksRemove implements AdminCommand {
 
     @Override
     public String accept(User user, List<String> args, LibraryFile libraryFile) {
-        if(!isValidArgsCount(args.size())) {
+        if (!isValidArgsCount(args.size())) {
             return INCORRECT_USAGE;
         }
         return user.visit(this, args, libraryFile);

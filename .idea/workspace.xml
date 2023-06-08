@@ -11,8 +11,36 @@
   <component name="ChangeListManager">
     <list default="true" id="bd6be47a-342f-4cde-8c77-7b415d825824" name="Changes" comment="Add log in functionality, accounts and skeleton for adding more commands">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OOP part 1 project.jar" beforeDir="false" afterPath="$PROJECT_DIR$/OOP part 1 project.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/accounts.txt" beforeDir="false" afterPath="$PROJECT_DIR$/files/accounts.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/contracts/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/contracts/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/dao/AccountDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/dao/AccountDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/dao/contracts/AccountDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/dao/contracts/AccountDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/implementations/authentication/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/implementations/authentication/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/implementations/authentication/Logout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/implementations/authentication/Logout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/implementations/books/BooksAdd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/implementations/books/BooksAdd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/implementations/books/BooksAll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/implementations/books/BooksAll.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/implementations/books/BooksInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/implementations/books/BooksInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/implementations/books/BooksRemove.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/implementations/books/BooksRemove.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/implementations/books/BooksSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/implementations/books/BooksSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/implementations/books/BooksTableFormatter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/implementations/books/BooksTableFormatter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/implementations/file/Close.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/implementations/file/Close.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/implementations/file/Open.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/implementations/file/Open.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/implementations/file/Save.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/implementations/file/Save.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/implementations/file/SaveAs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/implementations/file/SaveAs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/implementations/users/UsersAdd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/implementations/users/UsersAdd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/implementations/users/UsersRemove.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/implementations/users/UsersRemove.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/book/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/book/Author.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/book/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/book/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/book/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/book/Library.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/book/Rating.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/book/Rating.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/parser/XmlParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/parser/XmlParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/parser/contracts/IParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/parser/contracts/IParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/roles/Guest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/roles/Guest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/roles/contracts/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/roles/contracts/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/wrappers/CurrentUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/wrappers/CurrentUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/wrappers/LibraryFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/wrappers/LibraryFile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,25 +70,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/coolb/IdeaProjects/OOP part 1 project&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;settings.editor.splitter.proportion&quot;: &quot;0.30401736&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "C:/Users/coolb/IdeaProjects/OOP part 1 project",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "Errors",
+    "settings.editor.splitter.proportion": "0.30401736"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\coolb\IdeaProjects\OOP part 1 project\src\lib\jaxb1" />
@@ -74,6 +104,9 @@
       <recent name="C:\Users\coolb\IdeaProjects\OOP part 1 project\src\lib\jaxb" />
       <recent name="C:\Users\coolb\IdeaProjects\OOP part 1 project\src" />
       <recent name="C:\Users\coolb\IdeaProjects\OOP part 1 project\src\files" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="commands.implementations.books" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -93,6 +126,9 @@
     </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\coolb\AppData\Roaming\Subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="bd6be47a-342f-4cde-8c77-7b415d825824" name="Changes" comment="" />
@@ -150,6 +186,13 @@
       <workItem from="1686155132802" duration="4324000" />
       <workItem from="1686243480173" duration="108000" />
       <workItem from="1686313856022" duration="7479000" />
+      <workItem from="1686847684290" duration="1338000" />
+      <workItem from="1687183519904" duration="2328000" />
+      <workItem from="1687616970482" duration="2082000" />
+      <workItem from="1688330713837" duration="4915000" />
+      <workItem from="1688902867812" duration="357000" />
+      <workItem from="1690369837973" duration="2415000" />
+      <workItem from="1691411106273" duration="9907000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1679514872614</created>

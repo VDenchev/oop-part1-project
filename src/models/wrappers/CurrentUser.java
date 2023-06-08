@@ -6,6 +6,7 @@ import models.roles.contracts.User;
 public class CurrentUser {
     private static CurrentUser instance;
     private User user;
+
     private CurrentUser() {
         this.user = new Guest();
     }

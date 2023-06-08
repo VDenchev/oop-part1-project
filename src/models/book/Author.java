@@ -14,7 +14,8 @@ public class Author {
         this.lastName = builder.lastName;
     }
 
-    private Author(){}
+    private Author() {
+    }
 
     public static class Builder {
         private String firstName;
@@ -59,6 +60,6 @@ public class Author {
 
     @Override
     public String toString() {
-       return getFullName();
+        return getFullName();
     }
 }

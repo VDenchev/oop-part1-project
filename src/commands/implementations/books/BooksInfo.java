@@ -24,7 +24,7 @@ public class BooksInfo implements ClientCommand {
         String bookIsbn = args.get(2);
         Book foundBook = library.getBookByIsbn(bookIsbn);
 
-        if(foundBook == null) {
+        if (foundBook == null) {
             return String.format(BOOK_NOT_FOUND, bookIsbn);
         }
         return foundBook.toString();
@@ -32,7 +32,7 @@ public class BooksInfo implements ClientCommand {
 
     @Override
     public String accept(User user, List<String> args, LibraryFile libraryFile) {
-        if(!isValidArgsCount(args.size())) {
+        if (!isValidArgsCount(args.size())) {
             return INCORRECT_USAGE;
         }
         return user.visit(this, args, libraryFile);

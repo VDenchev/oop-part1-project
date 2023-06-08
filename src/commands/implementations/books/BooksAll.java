@@ -16,6 +16,7 @@ public class BooksAll implements ClientCommand {
 
     private Library library;
     private Scanner scanner;
+
     public BooksAll(Library library, Scanner scanner) {
         this.library = library;
         this.scanner = scanner;

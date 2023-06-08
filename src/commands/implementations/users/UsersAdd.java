@@ -20,7 +20,7 @@ public class UsersAdd implements AdminCommand {
     }
 
     @Override
-    public String execute(List<String> args){
+    public String execute(List<String> args) {
         String username = args.get(2);
         String password = args.get(3);
 
@@ -31,6 +31,7 @@ public class UsersAdd implements AdminCommand {
             return e.getMessage();
         }
     }
+
     @Override
     public String accept(User user, List<String> args, LibraryFile libraryFile) {
         if (!isValidArgsCount(args.size())) {

@@ -17,8 +17,8 @@ public class XmlParser implements IParser {
 
             marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
             marshaller.marshal(library, file);
-        } catch(JAXBException e) {
-           throw new ParserException(e.getMessage(), e);
+        } catch (JAXBException e) {
+            throw new ParserException(e.getMessage(), e);
         }
     }
 
@@ -27,7 +27,7 @@ public class XmlParser implements IParser {
         try {
             JAXBContext context = JAXBContext.newInstance(libraryClass);
             return (Library) (context.createUnmarshaller().unmarshal(file));
-        } catch(JAXBException e) {
+        } catch (JAXBException e) {
             throw new ParserException(e.getMessage(), e);
         }
     }

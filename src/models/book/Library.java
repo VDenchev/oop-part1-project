@@ -29,7 +29,7 @@ public class Library {
     }
 
     public void addBook(Book book) {
-        if(!books.add(book)) {
+        if (!books.add(book)) {
             throw new IllegalArgumentException("Book with id " + book.getId() + " already exists!");
         }
     }

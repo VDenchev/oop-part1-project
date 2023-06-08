@@ -6,7 +6,7 @@ import jakarta.xml.bind.annotation.*;
 @XmlRootElement
 @XmlType(propOrder = {"id", "isbn", "title", "author", "genre", "publishingYear", "keywords", "description", "rating"})
 public class Book {
-    private int id ;
+    private int id;
     private String isbn;
     private String title;
     private Author author;
@@ -28,10 +28,11 @@ public class Book {
         this.rating = builder.rating;
     }
 
-    private Book() {}
+    private Book() {
+    }
 
     public static class Builder {
-        private int id ;
+        private int id;
         private String isbn;
         private String title;
         private Author author;
@@ -75,7 +76,7 @@ public class Book {
 
         public Book build() {
             //TODO: add validation
-             if (id < 0) throw new IllegalArgumentException("Book ID cannot be a negative number!");
+            if (id < 0) throw new IllegalArgumentException("Book ID cannot be a negative number!");
 
             return new Book(this);
         }
@@ -159,7 +160,7 @@ public class Book {
         this.id = id;
     }
 
-    private  void setIsbn(String isbn) {
+    private void setIsbn(String isbn) {
         this.isbn = isbn;
     }
 

@@ -19,7 +19,7 @@ public class UsersRemove implements AdminCommand {
         this.accountService = accountService;
     }
 
-    public String execute(List<String> args){
+    public String execute(List<String> args) {
         String username = args.get(2);
 
         try {
@@ -29,9 +29,10 @@ public class UsersRemove implements AdminCommand {
             return e.getMessage();
         }
     }
+
     @Override
     public String accept(User user, List<String> args, LibraryFile libraryFile) {
-        if(!isValidArgsCount(args.size())) {
+        if (!isValidArgsCount(args.size())) {
             return INCORRECT_USAGE;
         }
         return user.visit(this, args, libraryFile);

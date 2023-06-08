@@ -25,7 +25,7 @@ public class BooksTableFormatter {
         int end = Math.min(pageNumber * itemsPerPage, books.size());
         List<Book> booksOnPage = books.subList(start, end);
 
-        String headers =  String.format(rowFormat, headerNames.toArray());
+        String headers = String.format(rowFormat, headerNames.toArray());
         StringBuilder sb = new StringBuilder(border).append(headers).append(border);
 
         for (Book book : booksOnPage) {
@@ -38,6 +38,7 @@ public class BooksTableFormatter {
 
         return sb.toString();
     }
+
     private String calculateRowFormat(int padding) {
         List<Integer> columnWidths = calculateColumnWidths(books, padding);
 
@@ -87,6 +88,6 @@ public class BooksTableFormatter {
     }
 
     public int getPagesCount() {
-        return (int)Math.ceil((double)books.size() / itemsPerPage);
+        return (int) Math.ceil((double) books.size() / itemsPerPage);
     }
 }

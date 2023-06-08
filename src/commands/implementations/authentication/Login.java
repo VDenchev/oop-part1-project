@@ -34,7 +34,7 @@ public class Login implements GuestCommand {
         System.out.println("Enter password:");
         String password = scanner.nextLine();
 
-        try{
+        try {
             Account account = accountService.getAccountFromFile(username, password);
             currentUser.login(account);
 
@@ -43,9 +43,10 @@ public class Login implements GuestCommand {
             return e.getMessage();
         }
     }
+
     @Override
     public String accept(User user, List<String> args, LibraryFile libraryFile) {
-        if(!isValidArgsCount(args.size())) {
+        if (!isValidArgsCount(args.size())) {
             return INCORRECT_USAGE;
         }
         return user.visit(this, args, libraryFile);

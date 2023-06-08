@@ -22,7 +22,7 @@ public class Guest implements User {
 
     @Override
     public String visit(GuestCommand guestCommand, List<String> args, LibraryFile libraryFile) {
-        return defaultVisit(guestCommand,args, libraryFile);
+        return defaultVisit(guestCommand, args, libraryFile);
     }
 
     @Override
